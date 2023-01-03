@@ -1,65 +1,62 @@
-import React from 'react';
-import {
-  Button,
-  Pressable,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from 'react-native';
-import {Formik} from 'formik';
+import React, {useEffect} from 'react';
+import {Pressable, Text, TextInput, View} from 'react-native';
+import {useForm, Controller} from 'react-hook-form';
 
-function Login() {
-  const styles = StyleSheet.create({
-    input: {
-      backgroundColor: '#faf2ec',
-    },
-    loginContainer: {
-      display: 'flex',
-      backgroundColor: '#141414',
-    },
-    loginButtonText: {
-      color: '#141414',
-    },
-    loginButton: {
-      backgroundColor: '#faf2ec',
-      paddingHorizontal: 32,
-      paddingVertical: 8,
-      overflow: 'hidden',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-  });
+function Login(navigation) {
+  const {
+    control,
+    handleSubmit,
+    formState: {errors},
+  } = useForm();
+
+  useEffect(() => console.log('Email error:', errors?.email), [errors?.email]);
+  useEffect(
+    () => console.log('Password error:', errors?.password),
+    [errors?.password],
+  );
+
+  const onSubmit = data => console.log(data);
 
   return (
     <View>
-      <Text>Login</Text>
-      <View style={styles.loginContainer}>
-        <Formik
-          initialValues={{email: '', password: ''}}
-          onSubmit={values => console.log(values)}>
-          {({handleChange, handleBlur, handleSubmit, values}) => (
-            <View>
-              <TextInput
-                style={styles.input}
-                onChangeText={handleChange('email')}
-                onBlur={handleBlur('email')}
-                value={values.email}
-              />
-              <TextInput
-                style={styles.input}
-                onChangeText={handleChange('password')}
-                onBlur={handleBlur('password')}
-                value={values.password}
-              />
-              <Pressable onPress={handleSubmit} style={styles.loginButton}>
-                <Text style={styles.loginButtonText}>Login</Text>
-              </Pressable>
-            </View>
-          )}
-        </Formik>
-      </View>
+      <Controller
+        control={control}
+        name="email"
+        rules={{
+          required: 'Email obrigatorio',
+          pattern: {
+            message: 'Email inválido',
+            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+          },
+        }}
+        render={({field: {value, onChange}}) => (
+          <TextInput
+            placeholder="email"
+            value={value}
+            onTextChange={onChange}
+            autoCapitalize="none"
+          />
+        )}
+      />
+      <Controller
+        control={control}
+        name="password"
+        rules={{
+          required: 'Palavra Passe obrigatoria',
+          minLength: 3,
+        }}
+        render={({field: {value, onChange}}) => (
+          <TextInput
+            placeholder="password"
+            value={value}
+            onTextChange={onChange}
+            secureTextEntry
+          />
+        )}
+      />
+      <Pressable onPress={handleSubmit(onSubmit)}>
+        <Text>Login</Text>
+      </Pressable>
     </View>
   );
 }
