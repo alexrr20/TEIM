@@ -1,13 +1,7 @@
 import React from 'react';
-import {
-  Pressable,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-  Appearance,
-} from 'react-native';
-import {useForm, Controller} from 'react-hook-form';
+import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {useForm} from 'react-hook-form';
+import TextInput1 from '../Components/TextInput1';
 
 function Login({navigation}) {
   const styles = StyleSheet.create({
@@ -15,6 +9,7 @@ function Login({navigation}) {
       flex: 1,
       flexDirection: 'column',
       justifyContent: 'flex-end',
+      backgroundColor: '#faf2ec',
     },
     container1: {
       flex: 1.6,
@@ -26,10 +21,18 @@ function Login({navigation}) {
       alignItems: 'center',
     },
     container3: {
-      width: '80%',
+      width: '67%',
       display: 'flex',
       justifyContent: 'center',
       height: '100%',
+    },
+    inputForgotContainer: {
+      flex: 3,
+      paddingTop: 30,
+    },
+    stayLoggedSubmitContainer: {
+      flex: 1.3,
+      paddingBottom: 3,
     },
     forgotPassword: {
       color: '#faf2ec',
@@ -38,10 +41,6 @@ function Login({navigation}) {
     stayLoggedText: {
       color: '#faf2ec',
       fontFamily: 'PPNeueMontreal-Medium',
-    },
-    inputContainer: {
-      height: 122,
-      marginBottom: 8,
     },
     loginBtn: {
       backgroundColor: '#faf2ec',
@@ -56,19 +55,6 @@ function Login({navigation}) {
       fontFamily: 'PPNeueMontreal-SemiBold',
       fontSize: 17,
     },
-    input: {
-      backgroundColor: '#faf2ec',
-    },
-    input1: {
-      borderTopLeftRadius: 4,
-      borderTopRightRadius: 4,
-      height: '50%',
-    },
-    input2: {
-      borderBottomLeftRadius: 4,
-      borderBottomRightRadius: 4,
-      height: '50%',
-    },
   });
 
   const {control, handleSubmit} = useForm();
@@ -81,52 +67,31 @@ function Login({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.container1}>
-        <Text>Login Header</Text>
+        <Text>.</Text>
       </View>
       <View style={styles.container2}>
         <View style={styles.container3}>
-          <View style={styles.inputContainer}>
-            <Controller
-              control={control}
-              name="email"
-              render={({field: {value, onChange}}) => (
-                <TextInput
-                  placeholder="email"
-                  value={value}
-                  onTextChange={onChange}
-                  style={[styles.input, styles.input1]}
-                  autoCapitalize="none"
-                />
-              )}
-            />
-            <Controller
-              control={control}
-              name="password"
-              render={({field: {value, onChange}}) => (
-                <TextInput
-                  placeholder="password"
-                  value={value}
-                  onTextChange={onChange}
-                  style={[styles.input, styles.input2]}
-                  secureTextEntry
-                />
-              )}
-            />
+          <View style={styles.inputForgotContainer}>
+            <TextInput1 control={control} name={['Email', 'Palavra-Passe']} />
+            <View>
+              <Pressable>
+                <Text style={styles.forgotPassword}>
+                  Esqueceu-se da sua palavra-passe?
+                </Text>
+              </Pressable>
+            </View>
           </View>
-          <View>
-            <Pressable>
-              <Text style={styles.forgotPassword}>
-                Esqueceu-se da sua palavra-passe?
-              </Text>
-            </Pressable>
-          </View>
-          <View>
-            <Text style={styles.stayLoggedText}>Manter sessão iniciada</Text>
-          </View>
-          <View style={styles.loginBtnContainer}>
-            <Pressable onPress={handleSubmit(onSubmit)} style={styles.loginBtn}>
-              <Text style={styles.loginBtnText}>Login</Text>
-            </Pressable>
+          <View style={styles.stayLoggedSubmitContainer}>
+            <View>
+              <Text style={styles.stayLoggedText}>Manter sessão iniciada</Text>
+            </View>
+            <View style={styles.loginBtnContainer}>
+              <Pressable
+                onPress={handleSubmit(onSubmit)}
+                style={styles.loginBtn}>
+                <Text style={styles.loginBtnText}>Login</Text>
+              </Pressable>
+            </View>
           </View>
         </View>
       </View>
