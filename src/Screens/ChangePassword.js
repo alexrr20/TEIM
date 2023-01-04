@@ -1,6 +1,5 @@
 import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
-import {Path, Svg} from 'react-native-svg';
 import TextInput1 from '../Components/TextInput1';
 import {useForm} from 'react-hook-form';
 import BackBtn from '../Components/BackBtn';

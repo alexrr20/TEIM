@@ -14,6 +14,8 @@
     "@legendapp/motion": "^2.2.0",
     "@react-navigation/native": "^6.1.1",
     "@react-navigation/native-stack": "^6.9.7",
+    "@shopify/react-native-skia": "^0.1.169",
+    "d3": "^7.8.0",
     "formik": "^2.2.9",
     "react": "18.1.0",
     "react-devtools": "^4.27.1",

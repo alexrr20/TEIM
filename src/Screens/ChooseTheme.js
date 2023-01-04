@@ -1,7 +1,7 @@
 import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
-import Svg, {Path} from 'react-native-svg';
 import BackBtn from '../Components/BackBtn';
+import Svg, {Path} from 'react-native-svg';
 
 function ChooseTheme({navigation}) {
   const styles = StyleSheet.create({
