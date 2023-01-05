@@ -1,17 +1,17 @@
 import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
-import TextInput1 from '../Components/TextInput1';
 import {useForm} from 'react-hook-form';
 import BackBtn from '../Components/BackBtn';
+import TextInput1 from '../Components/TextInput1';
+import {useTheme} from '@react-navigation/native';
 
 function ChangePassword({navigation}) {
+  const {colors} = useTheme();
+
   const styles = StyleSheet.create({
     mainContainer: {
-      backgroundColor: '#141414',
+      backgroundColor: colors.background,
       height: '100%',
-    },
-    backText: {
-      color: '#faf2ec',
     },
     backPressable: {
       display: 'flex',
@@ -20,13 +20,13 @@ function ChangePassword({navigation}) {
     header: {
       fontSize: 32.44,
       fontFamily: 'PPNeueMontreal-Bold',
-      color: '#faf2ec',
+      color: colors.text,
       textAlign: 'center',
     },
     subHeader: {
       fontSize: 14.24,
       fontFamily: 'PPNeueMontreal-Medium',
-      color: '#faf2ec',
+      color: colors.text,
       textAlign: 'center',
       lineHeight: 23,
     },
