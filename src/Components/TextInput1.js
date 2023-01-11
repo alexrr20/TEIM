@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-native';
 import PasswordVisibility from '../Hooks/PasswordVisibility';
+import {Path, Svg} from 'react-native-svg';
 
 function textInput1({control, name}) {
   const {passwordVisibility, rightIcon, handlePasswordVisibility} =
@@ -44,7 +45,9 @@ function textInput1({control, name}) {
       height: 65,
     },
     toggle: {
-      color: 'white',
+      color: 'black',
+      textAlign: 'right',
+      marginRight: '5%',
     },
   });
 
@@ -79,7 +82,17 @@ function textInput1({control, name}) {
           )}
         />
         <Pressable onPress={handlePasswordVisibility}>
-          <Text style={styles.toggle}>Toggle</Text>
+          <Svg
+            viewBox="0 0 100 100"
+            width="100"
+            height="100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <Path
+              d="M7 15.5L5.5 17.5M20.5 12.5C19.8612 13.5647 19.041 14.6294 18.0008 15.501M18.0008 15.501C16.5985 16.676 14.7965 17.5 12.5 17.5M18.0008 15.501L18 15.5M18.0008 15.501L19.5 17.5M12.5 17.5C8.5 17.5 6 15 4.5 12.5M12.5 17.5V20M15.5 17L16.5 19.5M9.5 17L8.5 19.5"
+              stroke="white" /* "#121923" */
+              stroke-width="1.2"></Path>
+          </Svg>
         </Pressable>
       </View>
     </View>

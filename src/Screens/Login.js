@@ -1,5 +1,12 @@
 import React from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  ImageBackground,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import {useForm} from 'react-hook-form';
 import TextInput1 from '../Components/TextInput1';
 
@@ -32,15 +39,18 @@ function Login({navigation}) {
     },
     stayLoggedSubmitContainer: {
       flex: 1.3,
-      paddingBottom: 3,
+      paddingBottom: 20,
+      marginBottom: '4%',
     },
     forgotPassword: {
       color: '#faf2ec',
       fontFamily: 'PPNeueMontreal-Medium',
+      marginTop: '3.5%',
     },
     stayLoggedText: {
       color: '#faf2ec',
       fontFamily: 'PPNeueMontreal-Medium',
+      marginBottom: '4%',
     },
     loginBtn: {
       backgroundColor: '#faf2ec',
@@ -55,6 +65,14 @@ function Login({navigation}) {
       fontFamily: 'PPNeueMontreal-SemiBold',
       fontSize: 17,
     },
+    loginImage: {
+      alignItems: 'center',
+      marginVertical: '45%',
+      resizeMode: 'center',
+      height: 250,
+      width: 430,
+      
+    },
   });
 
   const {control, handleSubmit} = useForm();
@@ -67,7 +85,10 @@ function Login({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.container1}>
-        <Text>.</Text>
+          <Image
+            style={styles.loginImage}
+            source={require('../../assets/images/teim.png')}
+          />
       </View>
       <View style={styles.container2}>
         <View style={styles.container3}>

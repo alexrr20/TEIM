@@ -7,10 +7,14 @@ export default function Back({navigation}) {
     backPressable: {
       display: 'flex',
       flexDirection: 'row',
+      marginLeft: '5%',
+      marginBottom: '2%',
     },
     backText: {
       color: '#faf2ec',
       fontFamily: 'PPNeueMontreal-Medium',
+      fontSize: 16,
+      marginLeft: '1%',
     },
   });
   return (
@@ -19,8 +23,8 @@ export default function Back({navigation}) {
         onPress={() => navigation.goBack()}
         style={styles.backPressable}>
         <Svg
-          width="18"
-          height="18"
+          width="20"
+          height="20"
           viewBox="0 0 15 15"
           fill="none"
           xmlns="http://www.w3.org/2000/svg">

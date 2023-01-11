@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <NavigationContainer theme={scheme === 'dark' ? DarkTheme : lightTheme}>
-      <StatusBar backgroundColor="#141414" barStyle="light-content" />
+      <StatusBar backgroundColor="#141414" barStyle="dark-content" />
       <Stack.Navigator
         screenOptions={{
           headerShown: false,

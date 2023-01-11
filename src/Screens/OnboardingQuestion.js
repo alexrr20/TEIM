@@ -2,14 +2,19 @@ import {View, Text, StyleSheet, Pressable} from 'react-native';
 import React from 'react';
 import BackBtn from '../Components/BackBtn';
 
+
 export default function OnboardingQuestion({navigation}) {
   const styles = StyleSheet.create({
     mainContainer: {
+      flex: 1,
       backgroundColor: '#141414',
       height: '100%',
+      paddingTop: (Platform.OS === 'ios') ? 20 : 0,
     },
     contentContainer: {
-      marginTop: 240,
+      flex: 1,
+      marginTop: 340,
+      marginHorizontal: '5%'
     },
     header: {
       fontSize: 32.44,
@@ -18,18 +23,19 @@ export default function OnboardingQuestion({navigation}) {
       textAlign: 'left',
     },
     subHeader: {
-      fontSize: 14.24,
+      fontSize: 16,
       fontFamily: 'PPNeueMontreal-Medium',
       color: '#faf2ec',
       textAlign: 'left',
       lineHeight: 23,
+      paddingBottom: 25,
     },
     noBtn: {
       backgroundColor: '#222148',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: 49,
+      height: 50,
       borderRadius: 4,
       borderColor: '#847EFF',
       borderWidth: 1,
@@ -43,8 +49,9 @@ export default function OnboardingQuestion({navigation}) {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: 49,
+      height: 50,
       borderRadius: 4,
+      marginVertical: 10,
     },
     yesBtnText: {
       color: '#faf2ec',
@@ -56,11 +63,12 @@ export default function OnboardingQuestion({navigation}) {
       marginTop: 100,
       marginLeft: 80,
       backgroundColor: '#6B64FF',
-      transform: [{scaleX: 13}, {rotate: '105deg'}],
+      transform: [{scale: 6}, {rotate: '105deg'}],
       borderTopLeftRadius: 208,
       borderTopRightRadius: 208,
       borderBottomLeftRadius: 205,
       borderBottomRightRadius: 205,
+      position: 'static',
     },
   });
   return (
