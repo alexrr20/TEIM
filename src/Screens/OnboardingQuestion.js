@@ -1,6 +1,6 @@
 import {View, Text, StyleSheet, Pressable} from 'react-native';
 import React from 'react';
-import BackBtn from '../Components/BackBtnOnboardingQuestion';
+import BackBtnOnboardingQuestion from '../Components/BackBtnOnboardingQuestion';
 
 
 export default function OnboardingQuestion({navigation}) {
@@ -73,7 +73,7 @@ export default function OnboardingQuestion({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.oval} />
-      <BackBtn navigation={navigation} />
+      <BackBtnOnboardingQuestion navigation={navigation} />
       <View style={styles.contentContainer}>
         <Text style={styles.header}>Precisa de ajuda?</Text>
         <Text style={styles.subHeader}>
