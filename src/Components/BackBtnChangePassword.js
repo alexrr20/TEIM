@@ -8,7 +8,7 @@ export default function Back({navigation}) {
       display: 'flex',
       flexDirection: 'row',
       marginLeft: '5%',
-      marginBottom: '2%',
+      marginBottom: '6%',
     },
     backText: {
       color: '#faf2ec',
