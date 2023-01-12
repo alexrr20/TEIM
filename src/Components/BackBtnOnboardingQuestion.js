@@ -14,6 +14,7 @@ export default function Back({navigation}) {
       color: '#faf2ec',
       fontFamily: 'PPNeueMontreal-Medium',
       fontSize: 18,
+      marginTop: 2,
       
 
     },
