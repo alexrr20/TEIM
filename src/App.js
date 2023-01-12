@@ -38,6 +38,7 @@ export default function App() {
           name="OnboardingQuestion"
           component={OnboardingQuestion}
         />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

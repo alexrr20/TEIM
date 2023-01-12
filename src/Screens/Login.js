@@ -71,7 +71,6 @@ function Login({navigation}) {
       resizeMode: 'center',
       height: 250,
       width: 430,
-      
     },
   });
 
@@ -85,15 +84,18 @@ function Login({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.container1}>
-          <Image
-            style={styles.loginImage}
-            source={require('../../assets/images/teim.png')}
-          />
+        <Image
+          style={styles.loginImage}
+          source={require('../../assets/images/teim.png')}
+        />
       </View>
       <View style={styles.container2}>
         <View style={styles.container3}>
           <View style={styles.inputForgotContainer}>
-            <TextInputLogin control={control} name={['Email', 'Palavra-Passe']} />
+            <TextInputLogin
+              control={control}
+              name={['Email', 'Palavra-Passe']}
+            />
             <View>
               <Pressable>
                 <Text style={styles.forgotPassword}>
