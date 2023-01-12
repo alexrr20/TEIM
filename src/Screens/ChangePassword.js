@@ -2,7 +2,7 @@ import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 import {useForm} from 'react-hook-form';
 import BackBtn from '../Components/BackBtnChangePassword';
-import TextInput1 from '../Components/TextInput1';
+import TextInputChangePassword from '../Components/TextInputChangePassword';
 import {useTheme} from '@react-navigation/native';
 
 function ChangePassword({navigation}) {
@@ -117,7 +117,7 @@ function ChangePassword({navigation}) {
           </Text>
         </View>
       </View>
-      <TextInput1
+      <TextInputChangePassword
         control={control}
         name={['Palavra-Passe', 'Confirmar Palavra-Passe']}
       />

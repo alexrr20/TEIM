@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 import {useForm} from 'react-hook-form';
-import TextInput1 from '../Components/TextInput1';
+import TextInputLogin from '../Components/TextInputLogin';
 
 function Login({navigation}) {
   const styles = StyleSheet.create({
@@ -93,7 +93,7 @@ function Login({navigation}) {
       <View style={styles.container2}>
         <View style={styles.container3}>
           <View style={styles.inputForgotContainer}>
-            <TextInput1 control={control} name={['Email', 'Palavra-Passe']} />
+            <TextInputLogin control={control} name={['Email', 'Palavra-Passe']} />
             <View>
               <Pressable>
                 <Text style={styles.forgotPassword}>
