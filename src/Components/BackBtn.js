@@ -13,8 +13,8 @@ export default function Back({navigation}) {
     backText: {
       color: '#faf2ec',
       fontFamily: 'PPNeueMontreal-Medium',
-      fontSize: 16,
-      marginLeft: '1%',
+      fontSize: 18,
+      marginTop: '3%',
     },
   });
   return (
@@ -23,8 +23,8 @@ export default function Back({navigation}) {
         onPress={() => navigation.goBack()}
         style={styles.backPressable}>
         <Svg
-          width="20"
-          height="20"
+          width="25"
+          height="25"
           viewBox="0 0 15 15"
           fill="none"
           xmlns="http://www.w3.org/2000/svg">

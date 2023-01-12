@@ -1,6 +1,6 @@
 import {View, Text, StyleSheet, Pressable} from 'react-native';
 import React from 'react';
-import BackBtn from '../Components/BackBtn';
+import BackBtn from '../Components/BackBtnOnboardingQuestion';
 
 
 export default function OnboardingQuestion({navigation}) {
@@ -13,7 +13,7 @@ export default function OnboardingQuestion({navigation}) {
     },
     contentContainer: {
       flex: 1,
-      marginTop: 340,
+      marginTop: 360,
       marginHorizontal: '5%'
     },
     header: {
@@ -58,8 +58,8 @@ export default function OnboardingQuestion({navigation}) {
       fontFamily: 'PPNeueMontreal-SemiBold',
     },
     oval: {
-      width: 140,
-      height: 140,
+      width: 130,
+      height: 130,
       marginTop: 100,
       marginLeft: 80,
       backgroundColor: '#6B64FF',
