@@ -68,7 +68,6 @@ export default function OnboardingQuestion({navigation}) {
       borderTopRightRadius: 208,
       borderBottomLeftRadius: 205,
       borderBottomRightRadius: 205,
-      position: 'static',
     },
   });
   return (
