@@ -1,7 +1,7 @@
 import React from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {Platform, Pressable, StyleSheet, Text, View} from 'react-native';
 import {useForm} from 'react-hook-form';
-import BackBtn from '../Components/BackBtnChangePassword';
+import BackBtn from '../Components/BackBtn';
 import TextInputChangePassword from '../Components/TextInputChangePassword';
 import {useTheme} from '@react-navigation/native';
 
@@ -12,7 +12,7 @@ function ChangePassword({navigation}) {
     mainContainer: {
       backgroundColor: colors.background,
       height: '100%',
-      marginTop: '20%',
+      marginTop: Platform.OS === 'ios' ? '20%' : 0,
     },
     backPressable: {
       display: 'flex',
@@ -48,7 +48,6 @@ function ChangePassword({navigation}) {
       fontSize: 17,
       marginHorizontal: '3.5%',
       marginTop: '4%',
-      
     },
     darkModeContainer: {
       display: 'flex',
@@ -79,7 +78,6 @@ function ChangePassword({navigation}) {
       fontFamily: 'PPNeueMontreal-SemiBold',
       fontSize: 17,
     },
-  
   });
 
   const {control, handleSubmit} = useForm();

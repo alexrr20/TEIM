@@ -2,7 +2,6 @@ import {View, Text, StyleSheet, Pressable, Platform} from 'react-native';
 import React from 'react';
 import BackBtn from '../Components/BackBtn';
 import {useTheme} from '@react-navigation/native';
-import BackBtnOnboardingQuestion from '../Components/BackBtnOnboardingQuestion';
 
 export default function OnboardingQuestion({navigation, setupdone}) {
   const {colors} = useTheme();
@@ -12,7 +11,7 @@ export default function OnboardingQuestion({navigation, setupdone}) {
       backgroundColor: colors.background,
       flex: 1,
       height: '100%',
-      paddingTop: Platform.OS === 'ios' ? 20 : 0,
+      marginTop: Platform.OS === 'ios' ? 20 : 0,
     },
     contentContainer: {
       flex: 1,
@@ -63,7 +62,7 @@ export default function OnboardingQuestion({navigation, setupdone}) {
     oval: {
       width: 130,
       height: 130,
-      marginTop: 100,
+      marginTop: Platform.OS === 'ios' ? 100 : 0,
       marginLeft: 80,
       backgroundColor: '#6B64FF',
       transform: [{scale: 6}, {rotate: '105deg'}],
@@ -83,7 +82,7 @@ export default function OnboardingQuestion({navigation, setupdone}) {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.oval} />
-      <BackBtnOnboardingQuestion navigation={navigation} />
+      <BackBtn navigation={navigation} />
       <View style={styles.contentContainer}>
         <Text style={styles.header}>Precisa de ajuda?</Text>
         <Text style={styles.subHeader}>

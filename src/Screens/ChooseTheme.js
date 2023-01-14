@@ -1,8 +1,8 @@
 import React from 'react';
 import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
-import BackBtnChooseTheme from '../Components/BackBtnChooseTheme';
 import Svg, {Path} from 'react-native-svg';
 import {StatusBar} from 'react-native';
+import BackBtn from '../Components/BackBtn';
 
 function ChooseTheme({navigation}) {
   const styles = StyleSheet.create({
@@ -114,7 +114,7 @@ function ChooseTheme({navigation}) {
         </Pressable>
       </View>
       <View style={styles.backContainer}>
-        <BackBtnChooseTheme navigation={navigation} />
+        <BackBtn navigation={navigation} />
         <Text style={styles.backText}>
           Pode alterar a sua escolha no menu definições
         </Text>
