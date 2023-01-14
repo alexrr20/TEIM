@@ -1,11 +1,14 @@
 import {View, Text, StyleSheet, Pressable} from 'react-native';
 import React from 'react';
 import BackBtn from '../Components/BackBtn';
+import {useTheme} from '@react-navigation/native';
 
-export default function OnboardingQuestion({navigation}) {
+export default function OnboardingQuestion({navigation, setupdone}) {
+  const {colors} = useTheme();
+
   const styles = StyleSheet.create({
     mainContainer: {
-      backgroundColor: '#141414',
+      backgroundColor: colors.background,
       height: '100%',
     },
     contentContainer: {
@@ -14,13 +17,13 @@ export default function OnboardingQuestion({navigation}) {
     header: {
       fontSize: 32.44,
       fontFamily: 'PPNeueMontreal-Bold',
-      color: '#faf2ec',
+      color: colors.text,
       textAlign: 'left',
     },
     subHeader: {
       fontSize: 14.24,
       fontFamily: 'PPNeueMontreal-Medium',
-      color: '#faf2ec',
+      color: colors.text,
       textAlign: 'left',
       lineHeight: 23,
     },
@@ -63,6 +66,12 @@ export default function OnboardingQuestion({navigation}) {
       borderBottomRightRadius: 205,
     },
   });
+
+  const handleSubmit = () => {
+    setupdone = true;
+    console.log(setupdone);
+  };
+
   return (
     <View style={styles.mainContainer}>
       <View style={styles.oval} />
@@ -74,16 +83,12 @@ export default function OnboardingQuestion({navigation}) {
           tempo, recomendamos que realize o tutorial.
         </Text>
         <View style={styles.loginBtnContainer}>
-          <Pressable
-            style={styles.noBtn}
-            onPress={() => navigation.navigate('OnboardingQuestion')}>
+          <Pressable style={styles.noBtn} onPress={handleSubmit}>
             <Text style={styles.noBtnText}>
               Não - quero utilizar a aplicação
             </Text>
           </Pressable>
-          <Pressable
-            style={styles.yesBtn}
-            onPress={() => navigation.navigate('OnboardingQuestion')}>
+          <Pressable style={styles.yesBtn} onPress={handleSubmit}>
             <Text style={styles.noBtnText}>Sim - preciso de ajuda</Text>
           </Pressable>
         </View>
