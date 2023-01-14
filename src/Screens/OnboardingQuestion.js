@@ -83,14 +83,14 @@ export default function OnboardingQuestion({navigation}) {
         <View style={styles.loginBtnContainer}>
           <Pressable
             style={styles.noBtn}
-            onPress={() => navigation.navigate('Test')}>
+            onPress={() => navigation.navigate('Home')}>
             <Text style={styles.noBtnText}>
               Não - quero utilizar a aplicação
             </Text>
           </Pressable>
           <Pressable
             style={styles.yesBtn}
-            onPress={() => navigation.navigate('Test')}>
+            onPress={() => navigation.navigate('Home')}>
             <Text style={styles.noBtnText}>Sim - preciso de ajuda</Text>
           </Pressable>
         </View>
