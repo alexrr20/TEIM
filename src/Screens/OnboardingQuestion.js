@@ -3,7 +3,7 @@ import React from 'react';
 import BackBtn from '../Components/BackBtn';
 import {useTheme} from '@react-navigation/native';
 
-export default function OnboardingQuestion({navigation, setupdone}) {
+export default function OnboardingQuestion({setLoggedIn, navigation}) {
   const {colors} = useTheme();
 
   const styles = StyleSheet.create({
@@ -74,9 +74,7 @@ export default function OnboardingQuestion({navigation, setupdone}) {
   });
 
   const handleSubmit = () => {
-    setupdone = true;
-    navigation.navigate('Home');
-    console.log(setupdone);
+    setLoggedIn(true);
   };
 
   return (
