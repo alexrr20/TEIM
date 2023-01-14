@@ -1,7 +1,6 @@
-import {View, Text, StyleSheet, Pressable} from 'react-native';
+import {View, Text, StyleSheet, Pressable, Platform} from 'react-native';
 import React from 'react';
 import BackBtnOnboardingQuestion from '../Components/BackBtnOnboardingQuestion';
-
 
 export default function OnboardingQuestion({navigation}) {
   const styles = StyleSheet.create({
@@ -9,12 +8,12 @@ export default function OnboardingQuestion({navigation}) {
       flex: 1,
       backgroundColor: '#141414',
       height: '100%',
-      paddingTop: (Platform.OS === 'ios') ? 20 : 0,
+      paddingTop: Platform.OS === 'ios' ? 20 : 0,
     },
     contentContainer: {
       flex: 1,
       marginTop: 360,
-      marginHorizontal: '5%'
+      marginHorizontal: '5%',
     },
     header: {
       fontSize: 32.44,
