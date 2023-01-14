@@ -1,7 +1,8 @@
-import {View, Text, StyleSheet, Pressable} from 'react-native';
+import {View, Text, StyleSheet, Pressable, Platform} from 'react-native';
 import React from 'react';
 import BackBtn from '../Components/BackBtn';
 import {useTheme} from '@react-navigation/native';
+import BackBtnOnboardingQuestion from '../Components/BackBtnOnboardingQuestion';
 
 export default function OnboardingQuestion({navigation, setupdone}) {
   const {colors} = useTheme();
@@ -9,10 +10,14 @@ export default function OnboardingQuestion({navigation, setupdone}) {
   const styles = StyleSheet.create({
     mainContainer: {
       backgroundColor: colors.background,
+      flex: 1,
       height: '100%',
+      paddingTop: Platform.OS === 'ios' ? 20 : 0,
     },
     contentContainer: {
-      marginTop: 240,
+      flex: 1,
+      marginTop: 360,
+      marginHorizontal: '5%',
     },
     header: {
       fontSize: 32.44,
@@ -21,18 +26,19 @@ export default function OnboardingQuestion({navigation, setupdone}) {
       textAlign: 'left',
     },
     subHeader: {
-      fontSize: 14.24,
+      fontSize: 16,
       fontFamily: 'PPNeueMontreal-Medium',
       color: colors.text,
       textAlign: 'left',
       lineHeight: 23,
+      paddingBottom: 25,
     },
     noBtn: {
       backgroundColor: '#222148',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: 49,
+      height: 50,
       borderRadius: 4,
       borderColor: '#847EFF',
       borderWidth: 1,
@@ -46,20 +52,21 @@ export default function OnboardingQuestion({navigation, setupdone}) {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: 49,
+      height: 50,
       borderRadius: 4,
+      marginVertical: 10,
     },
     yesBtnText: {
       color: '#faf2ec',
       fontFamily: 'PPNeueMontreal-SemiBold',
     },
     oval: {
-      width: 140,
-      height: 140,
+      width: 130,
+      height: 130,
       marginTop: 100,
       marginLeft: 80,
       backgroundColor: '#6B64FF',
-      transform: [{scaleX: 13}, {rotate: '105deg'}],
+      transform: [{scale: 6}, {rotate: '105deg'}],
       borderTopLeftRadius: 208,
       borderTopRightRadius: 208,
       borderBottomLeftRadius: 205,
@@ -76,7 +83,7 @@ export default function OnboardingQuestion({navigation, setupdone}) {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.oval} />
-      <BackBtn navigation={navigation} />
+      <BackBtnOnboardingQuestion navigation={navigation} />
       <View style={styles.contentContainer}>
         <Text style={styles.header}>Precisa de ajuda?</Text>
         <Text style={styles.subHeader}>

@@ -1,7 +1,8 @@
 import React from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
-import BackBtn from '../Components/BackBtn';
+import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import BackBtnChooseTheme from '../Components/BackBtnChooseTheme';
 import Svg, {Path} from 'react-native-svg';
+import {StatusBar} from 'react-native';
 
 function ChooseTheme({navigation}) {
   const styles = StyleSheet.create({
@@ -13,12 +14,14 @@ function ChooseTheme({navigation}) {
       backgroundColor: '#faf2ec',
       justifyContent: 'center',
       alignItems: 'center',
+      paddingTop: '10%',
     },
     darkModeContainer: {
       flex: 6,
       backgroundColor: '#141414',
       justifyContent: 'center',
       alignItems: 'center',
+      paddingTop: '1%',
     },
     backContainer: {
       backgroundColor: '#6B64FF',
@@ -55,19 +58,36 @@ function ChooseTheme({navigation}) {
       color: '#faf2ec',
       fontFamily: 'PPNeueMontreal-Bold',
       fontSize: 26,
+      paddingTop: 10,
+      marginHorizontal: '2%',
     },
     lightModeText: {
       color: '#141414',
       fontFamily: 'PPNeueMontreal-Bold',
       fontSize: 26,
+      textAlign: 'center',
+      paddingTop: 10,
+      position: 'absolute',
+      bottom: 0,
+      marginHorizontal: '2%',
+      marginVertical: '2%',
     },
     svgOpacity: {
       opacity: 0.07,
+    },
+    imageLight: {
+      width: 110,
+      height: '100%',
+      resizeMode: 'contain',
+      marginBottom: 50,
+      marginHorizontal: '34%',
+      marginVertical: '-10%',
     },
   });
 
   return (
     <View style={styles.mainContainer}>
+      <StatusBar barStyle="light-content" />
       <View style={styles.lightModeContainer}>
         <Pressable
           onPress={() => navigation.navigate('ChangePassword')}
@@ -87,10 +107,14 @@ function ChooseTheme({navigation}) {
               clip-rule="evenodd"
             />
           </Svg>
+          <Image
+            style={styles.imageLight}
+            source={require('../../assets/images/lighthome.png')}
+          />
         </Pressable>
       </View>
       <View style={styles.backContainer}>
-        <BackBtn navigation={navigation} />
+        <BackBtnChooseTheme navigation={navigation} />
         <Text style={styles.backText}>
           Pode alterar a sua escolha no menu definições
         </Text>
@@ -114,6 +138,10 @@ function ChooseTheme({navigation}) {
               clip-rule="evenodd"
             />
           </Svg>
+          <Image
+            style={styles.imageLight}
+            source={require('../../assets/images/darkhome.png')}
+          />
         </Pressable>
       </View>
     </View>

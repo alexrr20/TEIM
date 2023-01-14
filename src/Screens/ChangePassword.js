@@ -1,8 +1,8 @@
 import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 import {useForm} from 'react-hook-form';
-import BackBtn from '../Components/BackBtn';
-import TextInput1 from '../Components/TextInput1';
+import BackBtn from '../Components/BackBtnChangePassword';
+import TextInputChangePassword from '../Components/TextInputChangePassword';
 import {useTheme} from '@react-navigation/native';
 
 function ChangePassword({navigation}) {
@@ -12,6 +12,7 @@ function ChangePassword({navigation}) {
     mainContainer: {
       backgroundColor: colors.background,
       height: '100%',
+      marginTop: '20%',
     },
     backPressable: {
       display: 'flex',
@@ -22,13 +23,16 @@ function ChangePassword({navigation}) {
       fontFamily: 'PPNeueMontreal-Bold',
       color: colors.text,
       textAlign: 'center',
+      marginHorizontal: '10%',
     },
     subHeader: {
-      fontSize: 14.24,
+      fontSize: 15,
       fontFamily: 'PPNeueMontreal-Medium',
       color: colors.text,
       textAlign: 'center',
       lineHeight: 23,
+      marginVertical: '5%',
+      marginHorizontal: '5%',
     },
     darkModeBtn: {
       backgroundColor: '#222148',
@@ -41,7 +45,10 @@ function ChangePassword({navigation}) {
     darkModeText: {
       color: '#faf2ec',
       fontFamily: 'PPNeueMontreal-SemiBold',
-      fontSize: 16,
+      fontSize: 17,
+      marginHorizontal: '3.5%',
+      marginTop: '4%',
+      
     },
     darkModeContainer: {
       display: 'flex',
@@ -51,8 +58,11 @@ function ChangePassword({navigation}) {
     },
     bulletPoint: {
       color: '#faf2ec',
-      fontSize: 14,
+      fontSize: 16,
       fontFamily: 'PPNeueMontreal-Medium',
+      marginHorizontal: '5%',
+      marginTop: '7%',
+      textAlign: 'justify',
     },
     loginBtn: {
       backgroundColor: '#faf2ec',
@@ -61,12 +71,15 @@ function ChangePassword({navigation}) {
       alignItems: 'center',
       height: 49,
       borderRadius: 4,
+      marginVertical: '7%',
+      marginHorizontal: '7%',
     },
     loginBtnText: {
       color: '#141414',
       fontFamily: 'PPNeueMontreal-SemiBold',
       fontSize: 17,
     },
+  
   });
 
   const {control, handleSubmit} = useForm();
@@ -104,7 +117,7 @@ function ChangePassword({navigation}) {
           </Text>
         </View>
       </View>
-      <TextInput1
+      <TextInputChangePassword
         control={control}
         name={['Palavra-Passe', 'Confirmar Palavra-Passe']}
       />
