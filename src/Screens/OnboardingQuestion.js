@@ -69,6 +69,7 @@ export default function OnboardingQuestion({navigation, setupdone}) {
 
   const handleSubmit = () => {
     setupdone = true;
+    navigation.navigate('Home');
     console.log(setupdone);
   };
 

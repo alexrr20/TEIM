@@ -52,6 +52,7 @@ export default function App() {
             component={OnboardingQuestion}
             setupdone={SetupDone}
           />
+          <Stack.Screen name="Home" component={Home} />
         </Stack.Navigator>
       </NavigationContainer>
     );
