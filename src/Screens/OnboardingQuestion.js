@@ -1,9 +1,12 @@
 import {View, Text, StyleSheet, Pressable, Platform} from 'react-native';
-import React from 'react';
+import React, {useContext} from 'react';
 import BackBtn from '../Components/BackBtn';
 import {useTheme} from '@react-navigation/native';
+import {AuthContext} from '../Context/AuthContext';
 
 export default function OnboardingQuestion({setLoggedIn, navigation}) {
+  const {login} = useContext(AuthContext);
+
   const {colors} = useTheme();
 
   const styles = StyleSheet.create({
@@ -74,7 +77,7 @@ export default function OnboardingQuestion({setLoggedIn, navigation}) {
   });
 
   const handleSubmit = () => {
-    setLoggedIn(true);
+    login();
   };
 
   return (

@@ -1,27 +1,23 @@
-import React from 'react';
 import SetupNavigator from './SetupNavigator';
 import MainNavigator from './MainNavigator';
-import {useState, useEffect} from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import React, {useState, useEffect, useContext} from 'react';
+import {AuthContext} from '../Context/AuthContext';
+import {ActivityIndicator, View} from 'react-native';
 
 export default function Navigation() {
-  const [isLogged, setisLogged] = useState();
+  const {isLoading, userToken} = useContext(AuthContext);
 
-  useEffect(() => {
-    const getLoggedIn = async () => {
-      const loggedIn = await AsyncStorage.setItem(
-        'loggedIn',
-        JSON.stringify(false),
-      );
-      setisLogged(loggedIn);
-    };
+  if (isLoading) {
+    <View>
+      <ActivityIndicator size={'large'} />
+    </View>;
+  }
 
-    getLoggedIn().catch(console.error);
-  }, []);
+  console.log(userToken);
 
-  if (!isLogged) {
-    return <SetupNavigator />;
-  } else if (isLogged) {
+  if (userToken !== null) {
     return <MainNavigator />;
+  } else {
+    return <SetupNavigator />;
   }
 }

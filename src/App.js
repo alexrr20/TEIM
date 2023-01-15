@@ -7,7 +7,7 @@ import {
 } from '@react-navigation/native';
 import {StatusBar, useColorScheme} from 'react-native';
 import Navigation from './Navigation/Navigation';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import {AuthProvider} from './Context/AuthContext';
 
 export default function App() {
   const lightTheme = {
@@ -19,27 +19,20 @@ export default function App() {
     },
   };
 
-  useEffect(() => {
-    // declare the data fetching function
-    const fetchData = async () => {
-      await AsyncStorage.setItem('loggedIn', JSON.stringify(false));
-    };
-
-    fetchData().catch(console.error);
-  }, []);
-
   const scheme = useColorScheme();
   const {colors} = useTheme();
 
   return (
-    <NavigationContainer theme={scheme === 'dark' ? DarkTheme : lightTheme}>
-      <StatusBar
-        backgroundColor={colors.background}
-        barStyle={
-          colors.background === '#141414' ? 'light-content' : 'dark-content'
-        }
-      />
-      <Navigation />
-    </NavigationContainer>
+    <AuthProvider>
+      <NavigationContainer theme={scheme === 'dark' ? DarkTheme : lightTheme}>
+        <StatusBar
+          backgroundColor={colors.background}
+          barStyle={
+            colors.background === '#141414' ? 'light-content' : 'dark-content'
+          }
+        />
+        <Navigation />
+      </NavigationContainer>
+    </AuthProvider>
   );
 }
