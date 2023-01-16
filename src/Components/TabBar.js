@@ -34,6 +34,7 @@ export const MyTabBar = ({state, descriptors, navigation}) => {
       borderRadius: 10,
       justifyContent: 'center',
       alignItems: 'center',
+      marginRight: 10,
     },
     addTaskText: {
       fontFamily: 'PPNeueMontreal-SemiBold',
@@ -45,6 +46,11 @@ export const MyTabBar = ({state, descriptors, navigation}) => {
       alignItems: 'center',
       backgroundColor: colors.notification,
       borderRadius: 30,
+      marginLeft: 10,
+    },
+    divider: {
+      flex: 0.01,
+      backgroundColor: '#242424',
     },
     bottomContainer: {
       flexDirection: 'row',
@@ -57,8 +63,9 @@ export const MyTabBar = ({state, descriptors, navigation}) => {
     <View style={styles.mainContainer}>
       <View style={styles.topContainer}>
         <Pressable style={styles.addTaskBtn}>
-          <Text style={styles.addTaskText}>Adicionar Tarefa</Text>
+          <Text style={styles.addTaskText}>+ Adicionar Tarefa</Text>
         </Pressable>
+        <View style={styles.divider} />
         <Pressable style={styles.timerBtn}>
           <Svg
             width="20"

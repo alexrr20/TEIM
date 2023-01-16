@@ -4,7 +4,7 @@ import Home from '../Screens/Home';
 import {MyTabBar} from '../Components/TabBar';
 import Calendar from '../Screens/Calendar';
 import Statistics from '../Screens/Statistics';
-import Profile from '../Screens/Profile';
+import ProfileNavigator from './ProfileNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,11 +14,11 @@ const MainNavigation = () => {
       screenOptions={{
         headerShown: false,
       }}
-      tabBar={props => <MyTabBar s {...props} />}>
+      tabBar={props => <MyTabBar {...props} />}>
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Calendário" component={Calendar} />
       <Tab.Screen name="Relatório" component={Statistics} />
-      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen name="Profile" component={ProfileNavigator} />
     </Tab.Navigator>
   );
 };

@@ -10,8 +10,8 @@ export default function Header({headerText}) {
 
   const styles = StyleSheet.create({
     mainContainer: {
-      borderTopColor: colors.border,
-      borderTopWidth: 1,
+      borderBottomColor: colors.border,
+      borderBottomWidth: 1,
     },
     pageDate: {
       color: colors.text,

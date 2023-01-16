@@ -22,6 +22,8 @@ export default function App() {
   const scheme = useColorScheme();
   const {colors} = useTheme();
 
+  console.log(scheme);
+
   return (
     <AuthProvider>
       <NavigationContainer theme={scheme === 'dark' ? DarkTheme : lightTheme}>
