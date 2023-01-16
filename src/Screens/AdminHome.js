@@ -18,7 +18,7 @@ const AdminHome = ({navigation}) => {
     mainContainer: {
       backgroundColor: '#6B64FF',
       height: '100%',
-      dsiplay: 'flex',
+      display: 'flex',
     },
     userContainer: {
       flexDirection: 'row',
@@ -71,7 +71,9 @@ const AdminHome = ({navigation}) => {
         Controle todos os seus projetos e monitorize os seus funcionários e
         equipas.
       </Text>
-      <Pressable style={styles.pressableContainer}>
+      <Pressable
+        style={styles.pressableContainer}
+        onPress={() => navigation.navigate('Employee')}>
         <ImageBackground source={img1} style={styles.image}>
           <LinearGradient
             colors={['#00000000', '#000000']}
@@ -83,7 +85,9 @@ const AdminHome = ({navigation}) => {
           </View>
         </ImageBackground>
       </Pressable>
-      <Pressable style={styles.pressableContainer}>
+      <Pressable
+        style={styles.pressableContainer}
+        onPress={() => navigation.navigate('Project')}>
         <ImageBackground source={img2} style={styles.image}>
           <LinearGradient
             colors={['#00000000', '#000000']}
