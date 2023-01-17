@@ -4,11 +4,12 @@ import Header from '../Components/Header';
 
 const Calendar = () => {
   return (
-    <View>
+    <View style={{marginVertical: '17%'}}>
       <Header headerText={'Calendário'} />
       <Text>Calendar</Text>
     </View>
   );
 };
+
 
 export default Calendar;

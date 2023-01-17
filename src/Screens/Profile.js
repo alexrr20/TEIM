@@ -154,10 +154,13 @@ const Profile = ({navigation}) => {
       color: colors.text,
       fontSize: 14,
     },
+    screen: {
+      marginVertical: '17%',
+    }
   });
 
   return (
-    <View>
+    <View style={styles.screen}>
       <Header headerText={'Perfil'} />
       {renderAdmin()}
     </View>

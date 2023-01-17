@@ -30,7 +30,7 @@ export default function App() {
           <StatusBar
             backgroundColor={colors.background}
             barStyle={
-              colors.background === '#141414' ? 'light-content' : 'dark-content'
+              colors.background === '#141414' ? 'dark-content' : 'light-content'
             }
           />
           <Navigation />

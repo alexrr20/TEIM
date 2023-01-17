@@ -46,6 +46,9 @@ const Statistics = ({navigation}) => {
       borderBottomColor: colors.border,
       borderBottomWidth: 1,
     },
+    screen: {
+      marginVertical: '17%',
+    }
   });
 
   const values1 = [
@@ -63,7 +66,7 @@ const Statistics = ({navigation}) => {
   ];
 
   return (
-    <View>
+    <View style={styles.screen}> 
       <Header headerText={'Relatório'} />
       <View style={styles.navContainer}>
         <Pressable>

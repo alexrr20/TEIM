@@ -30,10 +30,13 @@ export default function Home() {
       borderWidth: 1,
       borderColor: '#847EFF',
     },
+    screen: {
+      marginVertical: '17%',
+    }
   });
 
   return (
-    <View>
+    <View style={styles.screen}>
       <Header headerText={'Página Inicial'} />
       <View>
         <SearchBar
