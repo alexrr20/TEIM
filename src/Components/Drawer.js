@@ -8,10 +8,13 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from 'react-native-reanimated';
+import {useTheme} from '@react-navigation/native';
 
 const {height: SCREEN_HEIGHT} = Dimensions.get('window');
 
 const Drawer = () => {
+  const {colors} = useTheme();
+
   const styles = StyleSheet.create({
     bottomSheetContainer: {
       height: SCREEN_HEIGHT,
@@ -29,6 +32,24 @@ const Drawer = () => {
       alignSelf: 'center',
       marginVertical: 15,
       borderRadius: 5,
+    },
+    header: {
+      marginTop: 10,
+      paddingHorizontal: 30,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border,
+      height: 100,
+    },
+    headerText: {
+      fontSize: 29,
+      color: colors.text,
+      fontFamily: 'PPNeueMontreal-Bold',
+    },
+    headersubText: {
+      fontSize: 14,
+      color: colors.text,
+      fontFamily: 'PPNeueMontreal-Medium',
+      lineHeight: 20,
     },
   });
 
@@ -76,9 +97,17 @@ const Drawer = () => {
 
   return (
     <GestureDetector gesture={gesture}>
-      <Animated.View style={[styles.bottomSheetContainer, rBottomSheetStyle]}>
+      <Animated.ScrollView
+        style={[styles.bottomSheetContainer, rBottomSheetStyle]}>
         <View style={styles.line} />
-      </Animated.View>
+        <View style={styles.header}>
+          <Text style={styles.headerText}>Adicionar Tarefa</Text>
+          <Text style={styles.headersubText}>
+            Pode criar aqui uma nova tarefa. Se ainda não sabe a sua duração,
+            sugerimos que use o temporizador.
+          </Text>
+        </View>
+      </Animated.ScrollView>
     </GestureDetector>
   );
 };
