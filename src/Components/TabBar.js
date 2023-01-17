@@ -10,6 +10,28 @@ import {useTheme} from '@react-navigation/native';
 import {Path, Svg} from 'react-native-svg';
 import Drawer from './Drawer';
 
+const test = ({route, focused}) => {
+  if (focused) {
+    return (
+      <Text
+        style={{
+          color: 'black',
+          fontSize: 15,
+          minWidth: 100,
+          textAlign: 'center',
+        }}>
+        {route.title}
+      </Text>
+    );
+  }
+  return (
+    <Text
+      style={{color: 'blue', fontSize: 15, minWidth: 100, textAlign: 'center'}}>
+      {route.title}
+    </Text>
+  );
+};
+
 export const MyTabBar = ({state, descriptors, navigation}) => {
   const {colors} = useTheme();
 
@@ -55,10 +77,11 @@ export const MyTabBar = ({state, descriptors, navigation}) => {
     },
     bottomContainer: {
       flexDirection: 'row',
-      backgroundColor: colors.border,
-      flex: 1,
-      borderRadius: 15,
+      backgroundColor: '#1A1920',
+      flex: 0.9,
+      borderRadius: 10,
       alignItems: 'center',
+      marginBottom: 20,
     },
   });
 
@@ -183,18 +206,44 @@ export const MyTabBar = ({state, descriptors, navigation}) => {
             });
           };
 
-          return (
-            <TouchableOpacity
-              accessibilityRole="button"
-              accessibilityStates={isFocused ? ['selected'] : []}
-              accessibilityLabel={options.tabBarAccessibilityLabel}
-              testID={options.tabBarTestID}
-              onPress={onPress}
-              onLongPress={onLongPress}
-              style={{flex: 1, alignItems: 'center'}}>
-              {getSVG()}
-            </TouchableOpacity>
-          );
+          const renderItems = () => {
+            if (isFocused) {
+              return (
+                <TouchableOpacity
+                  accessibilityRole="button"
+                  accessibilityStates={isFocused ? ['selected'] : []}
+                  accessibilityLabel={options.tabBarAccessibilityLabel}
+                  testID={options.tabBarTestID}
+                  onPress={onPress}
+                  onLongPress={onLongPress}
+                  style={{
+                    flex: 1,
+                    alignItems: 'center',
+                    backgroundColor: '#222148',
+                    height: '100%',
+                    borderRadius: 10,
+                    justifyContent: 'center',
+                  }}>
+                  {getSVG()}
+                </TouchableOpacity>
+              );
+            } else {
+              return (
+                <TouchableOpacity
+                  accessibilityRole="button"
+                  accessibilityStates={isFocused ? ['selected'] : []}
+                  accessibilityLabel={options.tabBarAccessibilityLabel}
+                  testID={options.tabBarTestID}
+                  onPress={onPress}
+                  onLongPress={onLongPress}
+                  style={{flex: 1, alignItems: 'center', opacity: 0.2}}>
+                  {getSVG()}
+                </TouchableOpacity>
+              );
+            }
+          };
+
+          return renderItems();
         })}
       </View>
     </View>
