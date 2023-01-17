@@ -8,6 +8,7 @@ import {
 import {StatusBar, useColorScheme} from 'react-native';
 import Navigation from './Navigation/Navigation';
 import {AuthProvider} from './Context/AuthContext';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
 export default function App() {
   const lightTheme = {
@@ -22,19 +23,19 @@ export default function App() {
   const scheme = useColorScheme();
   const {colors} = useTheme();
 
-  console.log(scheme);
-
   return (
-    <AuthProvider>
-      <NavigationContainer theme={scheme === 'dark' ? DarkTheme : lightTheme}>
-        <StatusBar
-          backgroundColor={colors.background}
-          barStyle={
-            colors.background === '#141414' ? 'light-content' : 'dark-content'
-          }
-        />
-        <Navigation />
-      </NavigationContainer>
-    </AuthProvider>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <AuthProvider>
+        <NavigationContainer theme={scheme === 'dark' ? DarkTheme : lightTheme}>
+          <StatusBar
+            backgroundColor={colors.background}
+            barStyle={
+              colors.background === '#141414' ? 'light-content' : 'dark-content'
+            }
+          />
+          <Navigation />
+        </NavigationContainer>
+      </AuthProvider>
+    </GestureHandlerRootView>
   );
 }

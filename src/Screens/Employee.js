@@ -36,6 +36,7 @@ const Employee = ({navigation}) => {
       fontFamily: 'PPNeueMontreal-SemiBold',
       color: '#faf2ec',
       fontSize: 18,
+      marginBottom: 12,
     },
   });
 
@@ -56,7 +57,7 @@ const Employee = ({navigation}) => {
         <Pressable>
           <Text style={styles.navText}>Funcionários</Text>
         </Pressable>
-        <Pressable>
+        <Pressable onPress={() => navigation.navigate('Project')}>
           <Text style={styles.navText}>Projetos</Text>
         </Pressable>
       </View>

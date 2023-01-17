@@ -1,14 +1,17 @@
-import {StyleSheet, View} from 'react-native';
-import React, {useState} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import React, {useCallback, useMemo, useRef, useState} from 'react';
 import Header from '../Components/Header';
 import Tasks from '../Components/Tasks';
 import DropDownPicker from 'react-native-dropdown-picker';
 import {Path, Svg} from 'react-native-svg';
 import SearchBar from 'react-native-dynamic-search-bar';
+import Drawer from '../Components/Drawer';
 
 export default function Home() {
-  const [open, setOpen] = useState(false);
+  const [orderOpen, setorderOpen] = useState(false);
+  const [timeOpen, settimeOpen] = useState(false);
   const [value, setValue] = useState(null);
+
   const [items, setItems] = useState([
     {label: 'Apple', value: 'apple'},
     {label: 'Banana', value: 'banana'},
@@ -19,7 +22,8 @@ export default function Home() {
       flexDirection: 'row',
     },
     searchBar: {
-      marginVertical: 20,
+      marginTop: 20,
+      marginBottom: 10,
       height: 50,
       backgroundColor: '#222148',
       borderWidth: 1,
@@ -43,10 +47,10 @@ export default function Home() {
       </View>
       <View style={styles.dropdownContainer}>
         <DropDownPicker
-          open={open}
+          open={orderOpen}
           value={value}
           items={items}
-          setOpen={setOpen}
+          setOpen={setorderOpen}
           setValue={setValue}
           setItems={setItems}
           style={{
@@ -63,7 +67,8 @@ export default function Home() {
           }}
           containerStyle={{
             flex: 1,
-            marginHorizontal: 30,
+            marginLeft: 20,
+            marginRight: 5,
           }}
           zIndex={3000}
           zIndexInverse={1000}
@@ -87,10 +92,10 @@ export default function Home() {
           )}
         />
         <DropDownPicker
-          open={open}
+          open={timeOpen}
           value={value}
           items={items}
-          setOpen={setOpen}
+          setOpen={settimeOpen}
           setValue={setValue}
           setItems={setItems}
           style={{
@@ -107,7 +112,8 @@ export default function Home() {
           }}
           containerStyle={{
             flex: 1,
-            marginHorizontal: 30,
+            marginRight: 20,
+            marginLeft: 5,
           }}
           zIndex={2000}
           zIndexInverse={2000}
@@ -115,6 +121,7 @@ export default function Home() {
         />
       </View>
       <Tasks />
+      <Drawer />
     </View>
   );
 }

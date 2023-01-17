@@ -5,6 +5,7 @@ import {MyTabBar} from '../Components/TabBar';
 import Calendar from '../Screens/Calendar';
 import Statistics from '../Screens/Statistics';
 import ProfileNavigator from './ProfileNavigator';
+import {Path, Svg} from 'react-native-svg';
 
 const Tab = createBottomTabNavigator();
 
