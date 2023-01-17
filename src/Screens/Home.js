@@ -13,8 +13,9 @@ export default function Home() {
   const [value, setValue] = useState(null);
 
   const [items, setItems] = useState([
-    {label: 'Apple', value: 'apple'},
-    {label: 'Banana', value: 'banana'},
+    {label: 'Recente', value: 'apple'},
+    {label: 'Duração (cres.)', value: 'apple'},
+    {label: 'Duração (decres.)', value: 'banana'},
   ]);
 
   const styles = StyleSheet.create({
@@ -24,7 +25,7 @@ export default function Home() {
     searchBar: {
       marginTop: 20,
       marginBottom: 10,
-      height: 50,
+      height: 45,
       backgroundColor: '#222148',
       borderWidth: 1,
       borderColor: '#847EFF',
