@@ -39,6 +39,9 @@ const Employee = ({navigation}) => {
       fontSize: 18,
       marginBottom: 12,
     },
+    infoContainer: {
+      marginTop: 20,
+    },
   });
 
   return (
@@ -66,7 +69,9 @@ const Employee = ({navigation}) => {
         <View>
           <Text>Selecionar</Text>
         </View>
-        <Projectinfo />
+        <View style={styles.infoContainer}>
+          <Projectinfo />
+        </View>
       </View>
     </View>
   );

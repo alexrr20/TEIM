@@ -32,7 +32,7 @@ const Profile = ({navigation}) => {
                     stroke="#faf2ec"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="35"
+                    strokeWidth="15"
                   />
                   <Path
                     d="M168,72s0-24,24-24,24-24,24-24"
@@ -40,7 +40,7 @@ const Profile = ({navigation}) => {
                     stroke="#faf2ec"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="35"
+                    strokeWidth="15"
                   />
                   <Line
                     x1="102.4"
@@ -51,7 +51,7 @@ const Profile = ({navigation}) => {
                     stroke="#faf2ec"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="35"
+                    strokeWidth="15"
                   />
                   <Line
                     x1="144"
@@ -62,7 +62,7 @@ const Profile = ({navigation}) => {
                     stroke="#faf2ec"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="35"
+                    strokeWidth="15"
                   />
                   <Line
                     x1="216"
@@ -73,7 +73,7 @@ const Profile = ({navigation}) => {
                     stroke="#faf2ec"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="35"
+                    strokeWidth="15"
                   />
                   <Line
                     x1="216"
@@ -84,7 +84,7 @@ const Profile = ({navigation}) => {
                     stroke="#faf2ec"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="35"
+                    strokeWidth="15"
                   />
                   <Line
                     x1="76.8"
@@ -95,7 +95,7 @@ const Profile = ({navigation}) => {
                     stroke="#faf2ec"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="35"
+                    strokeWidth="15"
                   />
                 </Svg>
               </View>

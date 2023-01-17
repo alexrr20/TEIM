@@ -8,7 +8,9 @@ const Projectinfo = () => {
     mainContainer: {
       backgroundColor: '#faf2ec',
       borderRadius: 10,
-      height: 150,
+      height: 170,
+      justifyContent: 'space-between',
+      marginHorizontal: 18,
     },
     projectName: {
       color: '#141414',
@@ -16,6 +18,7 @@ const Projectinfo = () => {
       fontFamily: 'PPNeueMontreal-SemiBold',
     },
     topContainer: {
+      marginTop: 10,
       flexDirection: 'row',
       justifyContent: 'space-between',
       paddingHorizontal: 20,
@@ -32,14 +35,23 @@ const Projectinfo = () => {
       flexDirection: 'row',
       borderTopColor: '#e2e2e2',
       borderTopWidth: 1,
+      alignItems: 'center',
+      paddingVertical: 10,
+      paddingLeft: 20,
     },
     infoText: {
       color: '#727272',
       fontFamily: 'PPNeueMontreal-Medium',
+      marginLeft: 10,
     },
     infoTextName: {
       color: '#141414',
       fontFamily: 'PPNeueMontreal-SemiBold',
+    },
+    membersBadgeContainer: {
+      marginLeft: 20,
+      position: 'relative',
+      bottom: 15,
     },
   });
 
@@ -61,7 +73,9 @@ const Projectinfo = () => {
           />
         </Svg>
       </View>
-      <MembersBadge />
+      <View style={styles.membersBadgeContainer}>
+        <MembersBadge />
+      </View>
       <View style={styles.descContainer}>
         <Text style={styles.description}>Descrição</Text>
       </View>

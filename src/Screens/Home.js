@@ -3,9 +3,10 @@ import React, {useCallback, useMemo, useRef, useState} from 'react';
 import Header from '../Components/Header';
 import Tasks from '../Components/Tasks';
 import DropDownPicker from 'react-native-dropdown-picker';
-import {Path, Svg} from 'react-native-svg';
+import {Circle, Path, Rect, Svg, Line} from 'react-native-svg';
 import SearchBar from 'react-native-dynamic-search-bar';
 import Drawer from '../Components/Drawer';
+import {MagnifyingGlassIcon} from '@radix-ui/react-icons';
 
 export default function Home() {
   const [orderOpen, setorderOpen] = useState(false);
@@ -44,6 +45,39 @@ export default function Home() {
           fontFamily="PPNeueMontreal-Medium"
           onChangeText={text => console.log(text)}
           style={styles.searchBar}
+          textInputStyle={{colors: '#faf2ec'}}
+          searchIconComponent={
+            <Svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="17"
+              height="17"
+              fill="#faf2ec"
+              viewBox="0 0 256 256">
+              <Rect width="256" height="256" fill="none" />
+              <Circle
+                cx="116"
+                cy="116"
+                r="84"
+                fill="none"
+                stroke="#faf2ec"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                strokeWidth="24"
+              />
+              <Line
+                x1="175.4"
+                y1="175.4"
+                x2="224"
+                y2="224"
+                fill="none"
+                stroke="#faf2ec"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                strokeWidth="24"
+              />
+            </Svg>
+          }
+          clearIconComponent={<View />}
         />
       </View>
       <View style={styles.dropdownContainer}>
