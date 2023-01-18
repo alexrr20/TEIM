@@ -18,7 +18,7 @@ export default function OnboardingQuestion({setLoggedIn, navigation}) {
     },
     contentContainer: {
       flex: 1,
-      marginTop: 360,
+      marginTop: 280,
       marginHorizontal: '5%',
     },
     header: {
@@ -63,8 +63,8 @@ export default function OnboardingQuestion({setLoggedIn, navigation}) {
       fontFamily: 'PPNeueMontreal-SemiBold',
     },
     oval: {
-      width: 130,
-      height: 130,
+      width: 110,
+      height: 110,
       marginTop: Platform.OS === 'ios' ? 100 : 0,
       marginLeft: 80,
       backgroundColor: '#6B64FF',

@@ -1,9 +1,9 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 import Header from '../Components/Header';
-import Tasks from '../Components/Tasks';
+import TasksList from '../Components/TasksList';
 import DropDownPicker from 'react-native-dropdown-picker';
-import {Path, Svg} from 'react-native-svg';
+import {Circle, Path, Rect, Svg, Line} from 'react-native-svg';
 import SearchBar from 'react-native-dynamic-search-bar';
 import Drawer from '../Components/Drawer';
 
@@ -12,10 +12,16 @@ export default function Home() {
   const [timeOpen, settimeOpen] = useState(false);
   const [value, setValue] = useState(null);
 
-  const [items, setItems] = useState([
+  const [items1, setItems1] = useState([
     {label: 'Recente', value: 'apple'},
     {label: 'Duração (cres.)', value: 'apple'},
     {label: 'Duração (decres.)', value: 'banana'},
+  ]);
+
+  const [items2, setItems2] = useState([
+    {label: 'Sempre', value: 'apple'},
+    {label: 'Hoje', value: 'apple'},
+    {label: 'Esta Semana', value: 'banana'},
   ]);
 
   const styles = StyleSheet.create({
@@ -47,16 +53,49 @@ export default function Home() {
           fontFamily="PPNeueMontreal-Medium"
           onChangeText={text => console.log(text)}
           style={styles.searchBar}
+          textInputStyle={{colors: '#faf2ec'}}
+          searchIconComponent={
+            <Svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="17"
+              height="17"
+              fill="#faf2ec"
+              viewBox="0 0 256 256">
+              <Rect width="256" height="256" fill="none" />
+              <Circle
+                cx="116"
+                cy="116"
+                r="84"
+                fill="none"
+                stroke="#faf2ec"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                strokeWidth="24"
+              />
+              <Line
+                x1="175.4"
+                y1="175.4"
+                x2="224"
+                y2="224"
+                fill="none"
+                stroke="#faf2ec"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                strokeWidth="24"
+              />
+            </Svg>
+          }
+          clearIconComponent={<View />}
         />
       </View>
       <View style={styles.dropdownContainer}>
         <DropDownPicker
           open={orderOpen}
           value={value}
-          items={items}
+          items={items1}
           setOpen={setorderOpen}
           setValue={setValue}
-          setItems={setItems}
+          setItems={setItems1}
           style={{
             backgroundColor: '#1A1920',
             borderColor: '#242424',
@@ -98,10 +137,10 @@ export default function Home() {
         <DropDownPicker
           open={timeOpen}
           value={value}
-          items={items}
+          items={items2}
           setOpen={settimeOpen}
           setValue={setValue}
-          setItems={setItems}
+          setItems={setItems2}
           style={{
             backgroundColor: '#1A1920',
             borderColor: '#242424',
@@ -124,7 +163,7 @@ export default function Home() {
           placeholderStyle={{fontFamily: 'PPNeueMontreal-Medium'}}
         />
       </View>
-      <Tasks />
+      <TasksList />
       <Drawer />
     </View>
   );

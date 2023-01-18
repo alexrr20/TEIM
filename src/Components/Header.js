@@ -12,6 +12,7 @@ export default function Header({headerText}) {
     mainContainer: {
       borderBottomColor: colors.border,
       borderBottomWidth: 1,
+      paddingLeft: 20,
     },
     pageDate: {
       color: colors.text,
@@ -22,6 +23,7 @@ export default function Header({headerText}) {
       color: colors.text,
       fontFamily: 'PPNeueMontreal-Bold',
       fontSize: 32.44,
+      paddingBottom: 10,
     },
   });
 

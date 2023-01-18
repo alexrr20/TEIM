@@ -67,10 +67,10 @@ function Login({navigation}) {
     },
     loginImage: {
       alignItems: 'center',
-      marginVertical: '45%',
       resizeMode: 'center',
+      marginVertical: 150,
       height: 250,
-      width: 430,
+      width: 390,
     },
   });
 

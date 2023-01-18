@@ -8,6 +8,9 @@ const MembersBadge = () => {
       borderColor: '#3765DB',
       borderWidth: 1,
       borderRadius: 20,
+      width: 90,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
     text: {
       color: '#faf2ec',
