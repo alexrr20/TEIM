@@ -19,6 +19,7 @@ const AdminHome = ({navigation}) => {
       backgroundColor: '#6B64FF',
       height: '100%',
       display: 'flex',
+      paddingVertical: '17%'
     },
     userContainer: {
       flexDirection: 'row',
