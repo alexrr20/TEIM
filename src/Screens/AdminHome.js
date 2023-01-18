@@ -20,14 +20,20 @@ const AdminHome = ({navigation}) => {
       height: '100%',
       display: 'flex',
     },
+    topContainer: {
+      paddingHorizontal: 20,
+      marginBottom: 20,
+    },
     userContainer: {
       flexDirection: 'row',
       alignItems: 'center',
+      marginVertical: 15,
     },
     avatar: {
       width: 50,
       height: 50,
       borderRadius: 12,
+      marginRight: 14,
     },
     username: {
       color: '#faf2ec',
@@ -61,16 +67,18 @@ const AdminHome = ({navigation}) => {
 
   return (
     <View style={styles.mainContainer}>
-      <BackBtn navigation={navigation} />
-      <View style={styles.userContainer}>
-        <Image source={avatar} style={styles.avatar} />
-        <Text style={styles.username}>Alexandre Bessa</Text>
+      <View style={styles.topContainer}>
+        <BackBtn navigation={navigation} />
+        <View style={styles.userContainer}>
+          <Image source={avatar} style={styles.avatar} />
+          <Text style={styles.username}>Alexandre Bessa</Text>
+        </View>
+        <Text style={styles.header}>Ferramentas de Administrador</Text>
+        <Text style={styles.subHeader}>
+          Controle todos os seus projetos e monitorize os seus funcionários e
+          equipas.
+        </Text>
       </View>
-      <Text style={styles.header}>Ferramentas de Administrador</Text>
-      <Text style={styles.subHeader}>
-        Controle todos os seus projetos e monitorize os seus funcionários e
-        equipas.
-      </Text>
       <Pressable
         style={styles.pressableContainer}
         onPress={() => navigation.navigate('Employee')}>
