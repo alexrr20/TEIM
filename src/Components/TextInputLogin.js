@@ -62,6 +62,18 @@ function textInput1({control, name}) {
       </View>
       <View style={styles.inputContainer2}>
         <Text style={styles.label}>{name[1]}</Text>
+        <Controller
+          control={control}
+          name={name[1]}
+          render={({field: {value, onChange}}) => (
+            <TextInput
+              value={value}
+              onTextChange={onChange}
+              autoCorrect={false}
+              secureTextEntry={passwordVisibility}
+            />
+          )}
+        />
         <Pressable onPress={handlePasswordVisibility}>
           <Svg
             viewBox="0 0 100 100"
@@ -76,18 +88,6 @@ function textInput1({control, name}) {
             />
           </Svg>
         </Pressable>
-        <Controller
-          control={control}
-          name={name[1]}
-          render={({field: {value, onChange}}) => (
-            <TextInput
-              value={value}
-              onTextChange={onChange}
-              autoCorrect={false}
-              secureTextEntry={passwordVisibility}
-            />
-          )}
-        />
       </View>
     </View>
   );
