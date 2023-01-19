@@ -1,5 +1,4 @@
 import React from 'react';
-import {Controller} from 'react-hook-form';
 import {
   Image,
   Pressable,
@@ -10,7 +9,7 @@ import {
 } from 'react-native';
 import PasswordVisibility from '../Hooks/PasswordVisibility';
 
-function textInput1({control, name}) {
+function textInput1({name, setEmail, setPassword}) {
   const {passwordVisibility, rightIcon, handlePasswordVisibility} =
     PasswordVisibility();
 
@@ -46,37 +45,29 @@ function textInput1({control, name}) {
     toggle: {
       color: 'white',
     },
+    textInput: {
+      color: 'green',
+    },
   });
 
   return (
     <View style={styles.mainContainer}>
       <View style={styles.inputContainer1}>
         <Text style={styles.label}>{name[0]}</Text>
-        <Controller
-          control={control}
-          name={name[0]}
-          render={({field: {value, onChange}}) => (
-            <TextInput
-              value={value}
-              onTextChange={onChange}
-              autoCorrect={false}
-            />
-          )}
+        <TextInput
+          onChangeText={setEmail}
+          autoCorrect={false}
+          autoCapitalize="none"
         />
       </View>
       <View style={styles.inputContainer2}>
         <Text style={styles.label}>{name[1]}</Text>
-        <Controller
-          control={control}
-          name={name[1]}
-          render={({field: {value, onChange}}) => (
-            <TextInput
-              value={value}
-              onTextChange={onChange}
-              autoCorrect={false}
-              secureTextEntry={passwordVisibility}
-            />
-          )}
+        <TextInput
+          style={styles.textInput}
+          onChangeText={setPassword}
+          autoCorrect={false}
+          autoCapitalize="none"
+          secureTextEntry={passwordVisibility}
         />
         <Pressable onPress={handlePasswordVisibility}>
           <Text style={styles.toggle}>Toggle</Text>
