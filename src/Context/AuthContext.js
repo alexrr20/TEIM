@@ -10,7 +10,7 @@ export const AuthProvider = ({children}) => {
 
   const login = async ({email, password}) => {
     await axios
-      .post('http://localhost:3000/api-docs/#/workers/post_workers_login', {
+      .post('http://teim.onrender.com/api-docs/#/workers/post_workers_login', {
         email: 'alex11.bessa@gmail.com',
         password: 'alex',
       })
