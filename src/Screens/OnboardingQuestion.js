@@ -14,7 +14,7 @@ export default function OnboardingQuestion({setLoggedIn, navigation}) {
       backgroundColor: colors.background,
       flex: 1,
       height: '100%',
-      marginTop: Platform.OS === 'ios' ? 20 : 0,
+      marginTop: Platform.OS === 'ios' ? 40 : 0,
     },
     contentContainer: {
       flex: 1,
