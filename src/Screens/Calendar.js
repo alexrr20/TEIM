@@ -12,7 +12,7 @@ const Calendar = () => {
   console.log(now);
 
   const styles = StyleSheet.create({
-    mainContainer: {flex: 1, paddingVertical: '17%'},
+    mainContainer: {flex: 1, paddingTop: '17%'},
   });
 
   const timeToString = time => {
