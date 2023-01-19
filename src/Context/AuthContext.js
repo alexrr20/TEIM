@@ -10,9 +10,9 @@ export const AuthProvider = ({children}) => {
 
   const login = async ({email, password}) => {
     await axios
-      .post('http://teim.onrender.com/api-docs/#/workers/post_workers_login', {
-        email: 'alex11.bessa@gmail.com',
-        password: 'alex',
+      .post('https://teim.onrender.com/api-docs/#/workers/post_workers_login', {
+        email: '1',
+        password: '1',
       })
       .then(function (response) {
         try {
