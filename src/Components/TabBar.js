@@ -104,6 +104,10 @@ export const MyTabBar = ({state, descriptors, navigation}) => {
               ? options.title
               : route.name;
 
+          if (label === 'Project') {
+            return;
+          }
+
           const getSVG = () => {
             if (label === 'Home') {
               return (

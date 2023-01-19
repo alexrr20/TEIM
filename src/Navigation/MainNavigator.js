@@ -5,7 +5,7 @@ import {MyTabBar} from '../Components/TabBar';
 import Calendar from '../Screens/Calendar';
 import Statistics from '../Screens/Statistics';
 import ProfileNavigator from './ProfileNavigator';
-import {Path, Svg} from 'react-native-svg';
+import Project from '../Screens/Project';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,6 +17,7 @@ const MainNavigation = () => {
       }}
       tabBar={props => <MyTabBar {...props} />}>
       <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Project" component={Project} />
       <Tab.Screen name="Calendário" component={Calendar} />
       <Tab.Screen name="Relatório" component={Statistics} />
       <Tab.Screen name="Profile" component={ProfileNavigator} />

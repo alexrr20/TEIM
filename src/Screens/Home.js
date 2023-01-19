@@ -15,7 +15,7 @@ import SearchBar from 'react-native-dynamic-search-bar';
 import Drawer from '../Components/Drawer';
 import axios from 'axios';
 
-export default function Home() {
+export default function Home({navigation}) {
   const [orderOpen, setorderOpen] = useState(false);
   const [timeOpen, settimeOpen] = useState(false);
   const [value, setValue] = useState(null);
@@ -169,7 +169,7 @@ export default function Home() {
         />
       </View>
       <TasksList />
-      <Drawer />
+      <Drawer navigation={navigation} />
     </View>
   );
 }

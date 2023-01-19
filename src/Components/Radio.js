@@ -7,18 +7,20 @@ const Radio = ({data}) => {
   const {colors} = useTheme();
 
   const styles = StyleSheet.create({
-    mainContainer: {flexDirection: 'row', marginLeft: 20},
+    mainContainer: {flexDirection: 'row', marginLeft: 20, flexWrap: 'wrap'},
     selected: {
       borderRadius: 30,
       borderColor: colors.notification,
       borderWidth: 2,
       backgroundColor: colors.card,
+      marginHorizontal: 10,
     },
     unselected: {
       borderRadius: 30,
       borderColor: colors.border,
       borderWidth: 2,
       backgroundColor: '#1A1920',
+      marginHorizontal: 10,
     },
     text: {
       fontFamily: 'PPNeueMontreal-Medium',
@@ -44,7 +46,6 @@ const Radio = ({data}) => {
           </Pressable>
         );
       })}
-      <Text>{userOption}</Text>
     </View>
   );
 };

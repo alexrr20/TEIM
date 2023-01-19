@@ -46,7 +46,7 @@ function textInput1({name, setEmail, setPassword}) {
       color: 'white',
     },
     textInput: {
-      color: 'green',
+      color: '#141414',
     },
   });
 
@@ -55,6 +55,7 @@ function textInput1({name, setEmail, setPassword}) {
       <View style={styles.inputContainer1}>
         <Text style={styles.label}>{name[0]}</Text>
         <TextInput
+          style={styles.textInput}
           onChangeText={setEmail}
           autoCorrect={false}
           autoCapitalize="none"
