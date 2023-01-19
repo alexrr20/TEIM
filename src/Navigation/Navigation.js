@@ -7,14 +7,6 @@ import {ActivityIndicator, View} from 'react-native';
 export default function Navigation() {
   const {isLoading, userToken} = useContext(AuthContext);
 
-  if (isLoading) {
-    <View>
-      <ActivityIndicator size={'large'} />
-    </View>;
-  }
-
-  console.log(userToken);
-
   if (userToken !== null) {
     return <MainNavigator />;
   } else {

@@ -1,9 +1,11 @@
-import {View, Text, StyleSheet, Pressable} from 'react-native';
+import {View, Text, StyleSheet, Pressable, Image} from 'react-native';
 import React, {useContext, useState} from 'react';
 import Header from '../Components/Header';
 import {Path, Rect, Svg, Line} from 'react-native-svg';
 import {useTheme} from '@react-navigation/native';
 import {AuthContext} from '../Context/AuthContext';
+import avatar from '../../assets/images/avatar.jpg';
+import Projectinfo from '../Components/Projectinfo';
 
 const Profile = ({navigation}) => {
   const {logout} = useContext(AuthContext);
@@ -161,6 +163,36 @@ const Profile = ({navigation}) => {
       position: 'absolute',
       right: 20,
     },
+    avatar: {
+      width: 90,
+      height: 90,
+      borderRadius: 12,
+      marginRight: 14,
+    },
+    userHeaderContainer: {
+      marginHorizontal: 20,
+      marginTop: 30,
+      flexDirection: 'row',
+    },
+    userHeaderNameTagContainer: {
+      flexDirection: 'row',
+      alignItems: 'flex-end',
+    },
+    userInfoContainer: {justifyContent: 'space-between'},
+    userHeaderName: {
+      fontFamily: 'PPNeueMontreal-Bold',
+      color: colors.text,
+      fontSize: 32,
+    },
+    userHeaderDesc: {fontFamily: 'PPNeueMontreal-Medium'},
+    projetosHeader: {
+      color: colors.text,
+      fontFamily: 'PPNeueMontreal-SemiBold',
+      marginLeft: 20,
+      marginBottom: 20,
+      fontSize: 18,
+    },
+    projetosContainer: {marginTop: 20},
   });
 
   return (
@@ -182,6 +214,23 @@ const Profile = ({navigation}) => {
         </Svg>
       </Pressable>
       {renderAdmin()}
+      <View>
+        <View style={styles.userHeaderContainer}>
+          <Image source={avatar} style={styles.avatar} />
+          <View style={styles.userInfoContainer}>
+            <View style={styles.userHeaderNameTagContainer}>
+              <Text style={styles.userHeaderName}>Alexandre</Text>
+              <Text>#141414</Text>
+            </View>
+            <Text style={styles.userHeaderDesc}>Descrição</Text>
+            <Text>Joined Frejen in 2022</Text>
+          </View>
+        </View>
+      </View>
+      <View style={styles.projetosContainer}>
+        <Text style={styles.projetosHeader}>Projetos</Text>
+        <Projectinfo />
+      </View>
     </View>
   );
 };

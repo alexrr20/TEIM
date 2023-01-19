@@ -1,16 +1,14 @@
-import React from 'react';
-import {
-  Image,
-  ImageBackground,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-import {useForm} from 'react-hook-form';
-import TextInputLogin from '../Components/TextInputLogin';
+import React, {useContext, useState} from 'react';
+import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import TextInput1 from '../Components/TextInput1';
+import {AuthContext} from '../Context/AuthContext';
 
 function Login({navigation}) {
+  const {login} = useContext(AuthContext);
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   const styles = StyleSheet.create({
     mainContainer: {
       flex: 1,
@@ -74,10 +72,7 @@ function Login({navigation}) {
     },
   });
 
-  const {control, handleSubmit} = useForm();
-
   const onSubmit = data => {
-    console.log(data);
     navigation.navigate('ChooseTheme');
   };
 
@@ -92,9 +87,10 @@ function Login({navigation}) {
       <View style={styles.container2}>
         <View style={styles.container3}>
           <View style={styles.inputForgotContainer}>
-            <TextInputLogin
-              control={control}
+            <TextInput1
               name={['Email', 'Palavra-Passe']}
+              setEmail={setEmail}
+              setPassword={setPassword}
             />
             <View>
               <Pressable>
@@ -110,7 +106,7 @@ function Login({navigation}) {
             </View>
             <View style={styles.loginBtnContainer}>
               <Pressable
-                onPress={handleSubmit(onSubmit)}
+                onPress={() => login(email, password)}
                 style={styles.loginBtn}>
                 <Text style={styles.loginBtnText}>Login</Text>
               </Pressable>

@@ -9,6 +9,7 @@ import {StatusBar, useColorScheme} from 'react-native';
 import Navigation from './Navigation/Navigation';
 import {AuthProvider} from './Context/AuthContext';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {TaskProvider} from './Context/TaskContext';
 
 export default function App() {
   const lightTheme = {
@@ -28,15 +29,20 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{flex: 1}}>
       <AuthProvider>
-        <NavigationContainer theme={scheme === 'dark' ? DarkTheme : lightTheme}>
-          <StatusBar
-            backgroundColor={'#141414'}
-            barStyle={
-              colors.background === '#141414' ? 'light-content' : 'dark-content'
-            }
-          />
-          <Navigation />
-        </NavigationContainer>
+        <TaskProvider>
+          <NavigationContainer
+            theme={scheme === 'dark' ? DarkTheme : lightTheme}>
+            <StatusBar
+              backgroundColor={'#141414'}
+              barStyle={
+                colors.background === '#141414'
+                  ? 'light-content'
+                  : 'dark-content'
+              }
+            />
+            <Navigation />
+          </NavigationContainer>
+        </TaskProvider>
       </AuthProvider>
     </GestureHandlerRootView>
   );
