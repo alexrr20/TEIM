@@ -33,6 +33,7 @@ const AdminHome = ({navigation}) => {
       borderRadius: 12,
     },
     username: {
+      paddingLeft: 10,
       color: '#faf2ec',
       fontFamily: 'PPNeueMontreal-SemiBold',
       fontSize: 16,
