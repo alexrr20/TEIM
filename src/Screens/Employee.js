@@ -13,7 +13,7 @@ const Employee = ({navigation}) => {
       display: 'flex',
     },
     image: {height: 230, width: null},
-    categoryHeaderContainer: {position: 'absolute', bottom: 0},
+    categoryHeaderContainer: {paddingLeft:10,position: 'absolute', bottom: 0},
     categoryHeader: {
       fontFamily: 'PPNeueMontreal-Bold',
       color: '#faf2ec',

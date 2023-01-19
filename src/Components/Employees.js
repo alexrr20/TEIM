@@ -4,9 +4,9 @@ import {Path, Svg} from 'react-native-svg';
 
 const Employees = () => {
   const [employeeList, setemployeeList] = useState([
-    {name: 'Alexandre Bessa', teams: 3},
-    {name: 'Maria Ribeiro', teams: 3},
-    {name: 'Luís Teles', teams: 2},
+    {name: 'Alexandre Bessa', teams: 5},
+    {name: 'João Pinho', teams: 4},
+    {name: 'Pedro Baldaia', teams: 4},
   ]);
 
   const styles = StyleSheet.create({
