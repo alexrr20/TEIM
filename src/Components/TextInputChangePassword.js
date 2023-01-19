@@ -68,11 +68,11 @@ function textInput1({control, name}) {
             />
             <Svg
                 viewBox="0 0 100 100"
-                width="140"
-                height="140"
+                width="120"
+                height="120"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                style={{right: -90, position: 'absolute', bottom: -105}}>
+                style={{right: -70, position: 'absolute', bottom: -90}}>
                 <Path
                   d="M7 15.5L5.5 17.5M20.5 12.5C19.8612 13.5647 19.041 14.6294 18.0008 15.501M18.0008 15.501C16.5985 16.676 14.7965 17.5 12.5 17.5M18.0008 15.501L18 15.5M18.0008 15.501L19.5 17.5M12.5 17.5C8.5 17.5 6 15 4.5 12.5M12.5 17.5V20M15.5 17L16.5 19.5M9.5 17L8.5 19.5"
                   stroke="#121923"
@@ -98,11 +98,11 @@ function textInput1({control, name}) {
               />
               <Svg
                 viewBox="0 0 100 100"
-                width="140"
-                height="140"
+                width="120"
+                height="120"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                style={{right: -90, position: 'absolute', bottom: -105}}>
+                style={{right: -70, position: 'absolute', bottom: -90}}>
                 <Path
                   d="M7 15.5L5.5 17.5M20.5 12.5C19.8612 13.5647 19.041 14.6294 18.0008 15.501M18.0008 15.501C16.5985 16.676 14.7965 17.5 12.5 17.5M18.0008 15.501L18 15.5M18.0008 15.501L19.5 17.5M12.5 17.5C8.5 17.5 6 15 4.5 12.5M12.5 17.5V20M15.5 17L16.5 19.5M9.5 17L8.5 19.5"
                   stroke="#121923"
