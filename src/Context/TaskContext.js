@@ -21,7 +21,7 @@ export const TaskProvider = ({children}) => {
     console.log(bodyParameters, config);
 
     await axios
-      .get('http://10.0.2.2:3000/tasks', config, bodyParameters)
+      .get('https://teim.onrender.com/api-docs/#/tasks', config, bodyParameters)
       .then(function (response) {
         try {
           console.log(response.data);

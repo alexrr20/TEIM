@@ -65,15 +65,18 @@ function Login({navigation}) {
     },
     loginImage: {
       alignItems: 'center',
+      marginVertical: '45%',
       resizeMode: 'center',
-      height: '120%',
-      width: '100%',
+      height: 250,
+      width: 430,
     },
   });
 
+  /*
   const onSubmit = data => {
     navigation.navigate('ChooseTheme');
   };
+  */
 
   return (
     <View style={styles.mainContainer}>

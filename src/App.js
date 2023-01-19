@@ -24,8 +24,6 @@ export default function App() {
   const scheme = useColorScheme();
   const {colors} = useTheme();
 
-  console.log(colors.background);
-
   return (
     <GestureHandlerRootView style={{flex: 1}}>
       <AuthProvider>
@@ -36,8 +34,8 @@ export default function App() {
               backgroundColor={'#141414'}
               barStyle={
                 colors.background === '#141414'
-                  ? 'dark-content'
-                  : 'light-content'
+                  ? 'light-content'
+                  : 'dark-content'
               }
             />
             <Navigation />
@@ -47,3 +45,4 @@ export default function App() {
     </GestureHandlerRootView>
   );
 }
+
