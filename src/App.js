@@ -24,8 +24,6 @@ export default function App() {
   const scheme = useColorScheme();
   const {colors} = useTheme();
 
-  console.log(colors.background);
-
   return (
     <GestureHandlerRootView style={{flex: 1}}>
       <AuthProvider>

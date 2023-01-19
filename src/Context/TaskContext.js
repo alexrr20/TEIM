@@ -11,7 +11,7 @@ export const TaskProvider = ({children}) => {
   };
 
   const getTasks = async () => {
-    const token = getToken();
+    const token = await getToken();
     const config = {
       headers: {Authorization: `Bearer ${token}`},
     };

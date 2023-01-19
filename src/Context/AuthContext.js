@@ -8,11 +8,12 @@ export const AuthProvider = ({children}) => {
   const [userToken, setuserToken] = useState(null);
   const [isLoading, setisLoading] = useState(false);
 
-  const login = async ({email, password}) => {
+  const login = async (email, password) => {
+    console.log(email, password);
     await axios
       .post('http://10.0.2.2:3000/workers/login', {
-        email: 'alex11.bessa@gmail.com',
-        password: 'alex',
+        email: email,
+        password: password,
       })
       .then(function (response) {
         try {

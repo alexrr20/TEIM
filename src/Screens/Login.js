@@ -72,9 +72,11 @@ function Login({navigation}) {
     },
   });
 
+  /*
   const onSubmit = data => {
     navigation.navigate('ChooseTheme');
   };
+  */
 
   return (
     <View style={styles.mainContainer}>
