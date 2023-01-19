@@ -19,11 +19,13 @@ const AdminHome = ({navigation}) => {
       backgroundColor: '#6B64FF',
       height: '100%',
       display: 'flex',
-      paddingVertical: '17%'
+      paddingVertical: '17%',
     },
     userContainer: {
       flexDirection: 'row',
       alignItems: 'center',
+      paddingVertical: 10,
+      paddingLeft: 10
     },
     avatar: {
       width: 50,
@@ -39,11 +41,14 @@ const AdminHome = ({navigation}) => {
       color: '#faf2ec',
       fontFamily: 'PPNeueMontreal-Bold',
       fontSize: 37,
+      paddingHorizontal: 10,
     },
     subHeader: {
       color: '#faf2ec',
       fontFamily: 'PPNeueMontreal-Medium',
       fontSize: 16,
+      paddingHorizontal: 10,
+      paddingBottom: 10,
     },
     pressableContainer: {width: '100%', position: 'relative'},
     image: {height: 250, width: null},
