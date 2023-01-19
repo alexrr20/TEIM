@@ -67,9 +67,8 @@ function Login({navigation}) {
     loginImage: {
       alignItems: 'center',
       resizeMode: 'center',
-      marginVertical: 150,
-      height: 250,
-      width: 390,
+      height: '100%',
+      width: '100%',
     },
   });
 
