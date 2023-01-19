@@ -72,7 +72,7 @@ const AdminHome = ({navigation}) => {
     logoutContainer: {
       position: 'absolute',
       right: 30,
-      marginVertical: 115,
+      marginVertical: 75,
 
     },
   });
