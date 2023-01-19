@@ -14,20 +14,20 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-esmapp-esmappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-esmapp-esmappTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8F189EC02CD94A07880C63B0 /* PPNeueMontreal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77D2FC04F3BB45A3990208CF /* PPNeueMontreal-Bold.ttf */; };
-		1CA3A30060294237BC926C70 /* PPNeueMontreal-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6898BD3FB9C8418BA5091387 /* PPNeueMontreal-BoldItalic.ttf */; };
-		58E88BB24A63417E8386B3B5 /* PPNeueMontreal-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 322725E8CA264F8AA6630A5C /* PPNeueMontreal-Book.ttf */; };
-		01B450186D71405BAEDC820C /* PPNeueMontreal-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1462F06460564D5D82DEDF6A /* PPNeueMontreal-BookItalic.ttf */; };
-		B9C58BBABE90461AAFC56E5C /* PPNeueMontreal-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A588B050FA79471F92EAEA5C /* PPNeueMontreal-Italic.ttf */; };
-		079B82A7F1C34F3388FA748B /* PPNeueMontreal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96CD2F2848634A928E6A07ED /* PPNeueMontreal-Light.ttf */; };
-		5112851B1161420E9BF67090 /* PPNeueMontreal-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9453A504B3C4444CADEC5307 /* PPNeueMontreal-LightItalic.ttf */; };
-		0676357386A64DB0B7FB1826 /* PPNeueMontreal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1C15535E604845B0CF1058 /* PPNeueMontreal-Medium.ttf */; };
-		949288177BD848EBB6072BF4 /* PPNeueMontreal-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA10C51C30A4AC8B24B0689 /* PPNeueMontreal-MediumItalic.ttf */; };
-		918C71699CCB4C83B443D3ED /* PPNeueMontreal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD0DE0987B5E47F19BE49EE7 /* PPNeueMontreal-Regular.ttf */; };
-		E15D1B2B006241CA91EC9BE8 /* PPNeueMontreal-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77273956D155404A9122C01D /* PPNeueMontreal-SemiBold.ttf */; };
-		7FD369D9E20C4E71AF2A33A4 /* PPNeueMontreal-SemiBolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 422A266529EC40DEAA2FCECD /* PPNeueMontreal-SemiBolditalic.ttf */; };
-		EF7A988551DC40A68C40F72B /* PPNeueMontreal-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA038392DF84550B2EC647E /* PPNeueMontreal-Thin.ttf */; };
-		4DDB0A8C7F0E4E12BD696534 /* PPNeueMontreal-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A62FF112A0F641D7918A1203 /* PPNeueMontreal-ThinItalic.ttf */; };
+		C4F54F7BA2EB4865A52B36A3 /* PPNeueMontreal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 989D602BA78348AF90284CEB /* PPNeueMontreal-Bold.ttf */; };
+		CF1BC9BF9725420FB9A96538 /* PPNeueMontreal-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53371441B2D8468F8F9055EA /* PPNeueMontreal-BoldItalic.ttf */; };
+		CC5EFCF68558483597110EA4 /* PPNeueMontreal-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB2089A5F430400F879BF5B1 /* PPNeueMontreal-Book.ttf */; };
+		869158FDF3424259B51A35A3 /* PPNeueMontreal-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBF487AD28064BD8BC04D66E /* PPNeueMontreal-BookItalic.ttf */; };
+		B829B5AAAFA54A3083D039AD /* PPNeueMontreal-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 043D373BE09F4783ACCBBBB1 /* PPNeueMontreal-Italic.ttf */; };
+		ABE5C4D54CF24A6BA6D4913B /* PPNeueMontreal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A7AA85706674B36B7237D0F /* PPNeueMontreal-Light.ttf */; };
+		0576316823724791AAE9850F /* PPNeueMontreal-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DB5EA8E68D0472E8AA9BF25 /* PPNeueMontreal-LightItalic.ttf */; };
+		BD690E2E9D8E4216B01E11E2 /* PPNeueMontreal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EFE4A38703F41FB8B4DA401 /* PPNeueMontreal-Medium.ttf */; };
+		C1995FD7A1424ACA9B7B6A87 /* PPNeueMontreal-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 149AE056172F4E6CB5EF82CA /* PPNeueMontreal-MediumItalic.ttf */; };
+		3AF8EECEB5F44AFF9D6EB6B7 /* PPNeueMontreal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36BB225147DA4934AFFC3950 /* PPNeueMontreal-Regular.ttf */; };
+		BFAE23A9E5ED46288D1B3F3D /* PPNeueMontreal-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E67B06A72CC04FE099D6240A /* PPNeueMontreal-SemiBold.ttf */; };
+		5599AB64A14F4CD98C135182 /* PPNeueMontreal-SemiBolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387F04E147814442BB5EC0CF /* PPNeueMontreal-SemiBolditalic.ttf */; };
+		C41D2C27ADAC4573A35C5567 /* PPNeueMontreal-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 259347BACBDA46BD88479B25 /* PPNeueMontreal-Thin.ttf */; };
+		101734AAE8324EFCA972E2F8 /* PPNeueMontreal-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 570FC9435A4D48BA9A02065E /* PPNeueMontreal-ThinItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,20 +58,20 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = esmapp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-esmapp-esmappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esmapp-esmappTests.release.xcconfig"; path = "Target Support Files/Pods-esmapp-esmappTests/Pods-esmapp-esmappTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		77D2FC04F3BB45A3990208CF /* PPNeueMontreal-Bold.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Bold.ttf"; path = "../assets/fonts/PPNeueMontreal-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6898BD3FB9C8418BA5091387 /* PPNeueMontreal-BoldItalic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-BoldItalic.ttf"; path = "../assets/fonts/PPNeueMontreal-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		322725E8CA264F8AA6630A5C /* PPNeueMontreal-Book.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Book.ttf"; path = "../assets/fonts/PPNeueMontreal-Book.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1462F06460564D5D82DEDF6A /* PPNeueMontreal-BookItalic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-BookItalic.ttf"; path = "../assets/fonts/PPNeueMontreal-BookItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A588B050FA79471F92EAEA5C /* PPNeueMontreal-Italic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Italic.ttf"; path = "../assets/fonts/PPNeueMontreal-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		96CD2F2848634A928E6A07ED /* PPNeueMontreal-Light.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Light.ttf"; path = "../assets/fonts/PPNeueMontreal-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9453A504B3C4444CADEC5307 /* PPNeueMontreal-LightItalic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-LightItalic.ttf"; path = "../assets/fonts/PPNeueMontreal-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3C1C15535E604845B0CF1058 /* PPNeueMontreal-Medium.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Medium.ttf"; path = "../assets/fonts/PPNeueMontreal-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6EA10C51C30A4AC8B24B0689 /* PPNeueMontreal-MediumItalic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-MediumItalic.ttf"; path = "../assets/fonts/PPNeueMontreal-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CD0DE0987B5E47F19BE49EE7 /* PPNeueMontreal-Regular.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Regular.ttf"; path = "../assets/fonts/PPNeueMontreal-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		77273956D155404A9122C01D /* PPNeueMontreal-SemiBold.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-SemiBold.ttf"; path = "../assets/fonts/PPNeueMontreal-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		422A266529EC40DEAA2FCECD /* PPNeueMontreal-SemiBolditalic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-SemiBolditalic.ttf"; path = "../assets/fonts/PPNeueMontreal-SemiBolditalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2CA038392DF84550B2EC647E /* PPNeueMontreal-Thin.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Thin.ttf"; path = "../assets/fonts/PPNeueMontreal-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A62FF112A0F641D7918A1203 /* PPNeueMontreal-ThinItalic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-ThinItalic.ttf"; path = "../assets/fonts/PPNeueMontreal-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		989D602BA78348AF90284CEB /* PPNeueMontreal-Bold.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Bold.ttf"; path = "../assets/fonts/PPNeueMontreal-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		53371441B2D8468F8F9055EA /* PPNeueMontreal-BoldItalic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-BoldItalic.ttf"; path = "../assets/fonts/PPNeueMontreal-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CB2089A5F430400F879BF5B1 /* PPNeueMontreal-Book.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Book.ttf"; path = "../assets/fonts/PPNeueMontreal-Book.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CBF487AD28064BD8BC04D66E /* PPNeueMontreal-BookItalic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-BookItalic.ttf"; path = "../assets/fonts/PPNeueMontreal-BookItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		043D373BE09F4783ACCBBBB1 /* PPNeueMontreal-Italic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Italic.ttf"; path = "../assets/fonts/PPNeueMontreal-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0A7AA85706674B36B7237D0F /* PPNeueMontreal-Light.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Light.ttf"; path = "../assets/fonts/PPNeueMontreal-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6DB5EA8E68D0472E8AA9BF25 /* PPNeueMontreal-LightItalic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-LightItalic.ttf"; path = "../assets/fonts/PPNeueMontreal-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5EFE4A38703F41FB8B4DA401 /* PPNeueMontreal-Medium.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Medium.ttf"; path = "../assets/fonts/PPNeueMontreal-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		149AE056172F4E6CB5EF82CA /* PPNeueMontreal-MediumItalic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-MediumItalic.ttf"; path = "../assets/fonts/PPNeueMontreal-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		36BB225147DA4934AFFC3950 /* PPNeueMontreal-Regular.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Regular.ttf"; path = "../assets/fonts/PPNeueMontreal-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E67B06A72CC04FE099D6240A /* PPNeueMontreal-SemiBold.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-SemiBold.ttf"; path = "../assets/fonts/PPNeueMontreal-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		387F04E147814442BB5EC0CF /* PPNeueMontreal-SemiBolditalic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-SemiBolditalic.ttf"; path = "../assets/fonts/PPNeueMontreal-SemiBolditalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		259347BACBDA46BD88479B25 /* PPNeueMontreal-Thin.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-Thin.ttf"; path = "../assets/fonts/PPNeueMontreal-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		570FC9435A4D48BA9A02065E /* PPNeueMontreal-ThinItalic.ttf */ = {isa = PBXFileReference; name = "PPNeueMontreal-ThinItalic.ttf"; path = "../assets/fonts/PPNeueMontreal-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +150,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
-				578E40F060A340A081FBABFA /* Resources */,
+				E74C1A452FA64C86B897B577 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -177,23 +177,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		578E40F060A340A081FBABFA /* Resources */ = {
+		E74C1A452FA64C86B897B577 /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
-				77D2FC04F3BB45A3990208CF /* PPNeueMontreal-Bold.ttf */,
-				6898BD3FB9C8418BA5091387 /* PPNeueMontreal-BoldItalic.ttf */,
-				322725E8CA264F8AA6630A5C /* PPNeueMontreal-Book.ttf */,
-				1462F06460564D5D82DEDF6A /* PPNeueMontreal-BookItalic.ttf */,
-				A588B050FA79471F92EAEA5C /* PPNeueMontreal-Italic.ttf */,
-				96CD2F2848634A928E6A07ED /* PPNeueMontreal-Light.ttf */,
-				9453A504B3C4444CADEC5307 /* PPNeueMontreal-LightItalic.ttf */,
-				3C1C15535E604845B0CF1058 /* PPNeueMontreal-Medium.ttf */,
-				6EA10C51C30A4AC8B24B0689 /* PPNeueMontreal-MediumItalic.ttf */,
-				CD0DE0987B5E47F19BE49EE7 /* PPNeueMontreal-Regular.ttf */,
-				77273956D155404A9122C01D /* PPNeueMontreal-SemiBold.ttf */,
-				422A266529EC40DEAA2FCECD /* PPNeueMontreal-SemiBolditalic.ttf */,
-				2CA038392DF84550B2EC647E /* PPNeueMontreal-Thin.ttf */,
-				A62FF112A0F641D7918A1203 /* PPNeueMontreal-ThinItalic.ttf */,
+				989D602BA78348AF90284CEB /* PPNeueMontreal-Bold.ttf */,
+				53371441B2D8468F8F9055EA /* PPNeueMontreal-BoldItalic.ttf */,
+				CB2089A5F430400F879BF5B1 /* PPNeueMontreal-Book.ttf */,
+				CBF487AD28064BD8BC04D66E /* PPNeueMontreal-BookItalic.ttf */,
+				043D373BE09F4783ACCBBBB1 /* PPNeueMontreal-Italic.ttf */,
+				0A7AA85706674B36B7237D0F /* PPNeueMontreal-Light.ttf */,
+				6DB5EA8E68D0472E8AA9BF25 /* PPNeueMontreal-LightItalic.ttf */,
+				5EFE4A38703F41FB8B4DA401 /* PPNeueMontreal-Medium.ttf */,
+				149AE056172F4E6CB5EF82CA /* PPNeueMontreal-MediumItalic.ttf */,
+				36BB225147DA4934AFFC3950 /* PPNeueMontreal-Regular.ttf */,
+				E67B06A72CC04FE099D6240A /* PPNeueMontreal-SemiBold.ttf */,
+				387F04E147814442BB5EC0CF /* PPNeueMontreal-SemiBolditalic.ttf */,
+				259347BACBDA46BD88479B25 /* PPNeueMontreal-Thin.ttf */,
+				570FC9435A4D48BA9A02065E /* PPNeueMontreal-ThinItalic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -295,20 +295,20 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				8F189EC02CD94A07880C63B0 /* PPNeueMontreal-Bold.ttf in Resources */,
-				1CA3A30060294237BC926C70 /* PPNeueMontreal-BoldItalic.ttf in Resources */,
-				58E88BB24A63417E8386B3B5 /* PPNeueMontreal-Book.ttf in Resources */,
-				01B450186D71405BAEDC820C /* PPNeueMontreal-BookItalic.ttf in Resources */,
-				B9C58BBABE90461AAFC56E5C /* PPNeueMontreal-Italic.ttf in Resources */,
-				079B82A7F1C34F3388FA748B /* PPNeueMontreal-Light.ttf in Resources */,
-				5112851B1161420E9BF67090 /* PPNeueMontreal-LightItalic.ttf in Resources */,
-				0676357386A64DB0B7FB1826 /* PPNeueMontreal-Medium.ttf in Resources */,
-				949288177BD848EBB6072BF4 /* PPNeueMontreal-MediumItalic.ttf in Resources */,
-				918C71699CCB4C83B443D3ED /* PPNeueMontreal-Regular.ttf in Resources */,
-				E15D1B2B006241CA91EC9BE8 /* PPNeueMontreal-SemiBold.ttf in Resources */,
-				7FD369D9E20C4E71AF2A33A4 /* PPNeueMontreal-SemiBolditalic.ttf in Resources */,
-				EF7A988551DC40A68C40F72B /* PPNeueMontreal-Thin.ttf in Resources */,
-				4DDB0A8C7F0E4E12BD696534 /* PPNeueMontreal-ThinItalic.ttf in Resources */,
+				C4F54F7BA2EB4865A52B36A3 /* PPNeueMontreal-Bold.ttf in Resources */,
+				CF1BC9BF9725420FB9A96538 /* PPNeueMontreal-BoldItalic.ttf in Resources */,
+				CC5EFCF68558483597110EA4 /* PPNeueMontreal-Book.ttf in Resources */,
+				869158FDF3424259B51A35A3 /* PPNeueMontreal-BookItalic.ttf in Resources */,
+				B829B5AAAFA54A3083D039AD /* PPNeueMontreal-Italic.ttf in Resources */,
+				ABE5C4D54CF24A6BA6D4913B /* PPNeueMontreal-Light.ttf in Resources */,
+				0576316823724791AAE9850F /* PPNeueMontreal-LightItalic.ttf in Resources */,
+				BD690E2E9D8E4216B01E11E2 /* PPNeueMontreal-Medium.ttf in Resources */,
+				C1995FD7A1424ACA9B7B6A87 /* PPNeueMontreal-MediumItalic.ttf in Resources */,
+				3AF8EECEB5F44AFF9D6EB6B7 /* PPNeueMontreal-Regular.ttf in Resources */,
+				BFAE23A9E5ED46288D1B3F3D /* PPNeueMontreal-SemiBold.ttf in Resources */,
+				5599AB64A14F4CD98C135182 /* PPNeueMontreal-SemiBolditalic.ttf in Resources */,
+				C41D2C27ADAC4573A35C5567 /* PPNeueMontreal-Thin.ttf in Resources */,
+				101734AAE8324EFCA972E2F8 /* PPNeueMontreal-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +557,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -582,6 +583,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -627,7 +629,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -661,6 +663,7 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -698,7 +701,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -724,6 +727,7 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

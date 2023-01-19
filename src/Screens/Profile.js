@@ -193,10 +193,13 @@ const Profile = ({navigation}) => {
       fontSize: 18,
     },
     projetosContainer: {marginTop: 20},
+    screen: {
+      marginVertical: '17%',
+    },
   });
 
   return (
-    <View>
+    <View style={styles.screen}>
       <Header headerText={'Perfil'} />
       <Pressable onPress={logout} style={styles.logoutContainer}>
         <Svg

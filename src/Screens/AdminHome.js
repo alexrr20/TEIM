@@ -6,7 +6,8 @@ import {
   Pressable,
   ImageBackground,
 } from 'react-native';
-import React from 'react';
+import React, {useContext, useState} from 'react';
+import {Path, Rect, Svg, Line} from 'react-native-svg';
 import BackBtn from '../Components/BackBtn';
 import avatar from '../../assets/images/avatar.jpg';
 import img1 from '../../assets/images/funcionarios.jpg';

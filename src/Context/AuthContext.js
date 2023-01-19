@@ -8,12 +8,11 @@ export const AuthProvider = ({children}) => {
   const [userToken, setuserToken] = useState(null);
   const [isLoading, setisLoading] = useState(false);
 
-  const login = async (email, password) => {
-    console.log(email, password);
+  const login = async ({email, password}) => {
     await axios
-      .post('http://10.0.2.2:3000/workers/login', {
-        email: email,
-        password: password,
+      .post('https://teim.onrender.com/api-docs/#/workers/post_workers_login', {
+        email: '1',
+        password: '1',
       })
       .then(function (response) {
         try {
