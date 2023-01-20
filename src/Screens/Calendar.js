@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Platform} from 'react-native';
 import React, {useState} from 'react';
 import Header from '../Components/Header';
 import {Agenda} from 'react-native-calendars';
@@ -12,7 +12,7 @@ const Calendar = () => {
   console.log(now);
 
   const styles = StyleSheet.create({
-    mainContainer: {flex: 1, paddingTop: '17%'},
+    mainContainer: {flex: 1, marginVertical: Platform.OS === 'ios' ? '17%' : 0},
   });
 
   const timeToString = time => {

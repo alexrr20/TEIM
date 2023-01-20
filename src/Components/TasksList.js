@@ -6,7 +6,7 @@ import Swipeable from 'react-native-gesture-handler/Swipeable';
 import {FlatList} from 'react-native-gesture-handler';
 import Task from './Task';
 
-const TasksList = () => {
+const TasksList = ({tasks}) => {
   const {colors} = useTheme();
 
   const [taskItems, setTarefas] = useState([
@@ -57,7 +57,7 @@ const TasksList = () => {
   });
 
   const renderItems = () => {
-    if (taskItems.length === 0) {
+    if (tasks.length === 0) {
       return (
         <View style={styles.mainContainerEmpty}>
           <Text style={styles.emptyText}>Não existem tarefas</Text>
@@ -71,7 +71,7 @@ const TasksList = () => {
       return (
         <FlatList
           style={styles.mainContainer}
-          data={taskItems}
+          data={tasks}
           renderItem={item => {
             return <Task data={item} />;
           }}

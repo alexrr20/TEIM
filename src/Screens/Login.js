@@ -65,18 +65,18 @@ function Login({navigation}) {
     },
     loginImage: {
       alignItems: 'center',
-      marginVertical: '45%',
+      marginVertical: '35%',
+      marginHorizontal: '-5%',
       resizeMode: 'center',
       height: 250,
       width: 430,
     },
   });
 
-  /*
   const onSubmit = data => {
-    navigation.navigate('ChooseTheme');
+    navigation.navigate('ChangePassword');
+    login(email, password);
   };
-  */
 
   return (
     <View style={styles.mainContainer}>
@@ -107,9 +107,7 @@ function Login({navigation}) {
               <Text style={styles.stayLoggedText}>Manter sessão iniciada</Text>
             </View>
             <View style={styles.loginBtnContainer}>
-              <Pressable
-                onPress={() => login(email, password)}
-                style={styles.loginBtn}>
+              <Pressable onPress={() => onSubmit()} style={styles.loginBtn}>
                 <Text style={styles.loginBtnText}>Login</Text>
               </Pressable>
             </View>

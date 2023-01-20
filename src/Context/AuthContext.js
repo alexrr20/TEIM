@@ -7,12 +7,13 @@ export const AuthContext = createContext();
 export const AuthProvider = ({children}) => {
   const [userToken, setuserToken] = useState(null);
   const [isLoading, setisLoading] = useState(false);
+  const [setupDone, setSetupDone] = useState(false);
 
-  const login = async ({email, password}) => {
+  const login = async (email, password) => {
     await axios
-      .post('https://teim.onrender.com/api-docs/#/workers/post_workers_login', {
-        email: '1',
-        password: '1',
+      .post('http://10.0.2.2:3000/workers/login', {
+        email: email,
+        password: password,
       })
       .then(function (response) {
         try {
@@ -37,6 +38,11 @@ export const AuthProvider = ({children}) => {
     setisLoading(false);
   };
 
+  const changeSetupDone = () => {
+    setSetupDone(true);
+    console.log(setupDone);
+  };
+
   const isLoggedIn = async () => {
     try {
       setisLoading(true);
@@ -53,7 +59,8 @@ export const AuthProvider = ({children}) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{login, logout, isLoading, userToken}}>
+    <AuthContext.Provider
+      value={{login, logout, isLoading, userToken, changeSetupDone, setupDone}}>
       {children}
     </AuthContext.Provider>
   );

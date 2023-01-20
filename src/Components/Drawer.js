@@ -1,5 +1,5 @@
 import {View, Text, StyleSheet, Dimensions, Pressable} from 'react-native';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useContext, useEffect, useState} from 'react';
 import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import Animated, {
   Extrapolate,
@@ -14,11 +14,28 @@ import TextInput2 from '../Components/TextInput2';
 import DropDownPicker from 'react-native-dropdown-picker';
 import {Svg, Path} from 'react-native-svg';
 import Radio from './Radio';
+import {ProjectContext} from '../Context/ProjectContext';
 
 const {height: SCREEN_HEIGHT} = Dimensions.get('window');
 
 const Drawer = ({navigation}) => {
   const {colors} = useTheme();
+  const [projects, setProjects] = useState([]);
+
+  const {getProjects} = useContext(ProjectContext);
+
+  useEffect(() => {
+    const getProjectsEffect = async () => {
+      const result = await getProjects();
+      const objectToAdd = {
+        label: result[0].name,
+        value: result[0].name,
+      };
+      setProjects(oldArray => [...oldArray, objectToAdd]);
+    };
+
+    getProjectsEffect();
+  }, []);
 
   const [orderOpen, setorderOpen] = useState(false);
   const [timeOpen, settimeOpen] = useState(false);
@@ -88,9 +105,10 @@ const Drawer = ({navigation}) => {
     projectBtn: {
       flex: 0.8,
       backgroundColor: colors.notification,
-      borderRadius: 10,
+      borderRadius: 7,
       justifyContent: 'center',
       alignItems: 'center',
+      marginLeft: 10,
     },
     projectBtnText: {
       fontFamily: 'PPNeueMontreal-SemiBold',
@@ -100,11 +118,18 @@ const Drawer = ({navigation}) => {
       fontFamily: 'PPNeueMontreal-SemiBold',
       color: colors.text,
       marginLeft: 20,
+      marginTop: 14,
     },
     form1: {
       borderBottomWidth: 1,
       borderBottomColor: colors.border,
       paddingBottom: 30,
+    },
+    textInputContainer: {
+      position: 'relative',
+      bottom: 65,
+      width: 267,
+      left: 130,
     },
   });
 
@@ -177,7 +202,7 @@ const Drawer = ({navigation}) => {
           </Text>
         </View>
         <View style={styles.formContainer}>
-          <View style={styles.form1}>
+          <View>
             <View>
               <TextInput2
                 control={control}
@@ -191,7 +216,7 @@ const Drawer = ({navigation}) => {
                 <DropDownPicker
                   open={orderOpen}
                   value={value}
-                  items={items}
+                  items={projects}
                   setOpen={setorderOpen}
                   setValue={setValue}
                   setItems={setItems}
@@ -247,6 +272,9 @@ const Drawer = ({navigation}) => {
               <Text style={styles.dropDownHeader}>Duração</Text>
               <View style={styles.durationContainer2}>
                 <Radio data={durationValues} />
+                <View style={styles.textInputContainer}>
+                  <TextInput2 control={control} name={['']} />
+                </View>
               </View>
             </View>
           </View>

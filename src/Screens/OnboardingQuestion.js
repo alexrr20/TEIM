@@ -5,7 +5,7 @@ import {useTheme} from '@react-navigation/native';
 import {AuthContext} from '../Context/AuthContext';
 
 export default function OnboardingQuestion({setLoggedIn, navigation}) {
-  const {login} = useContext(AuthContext);
+  const {login, changeSetupDone} = useContext(AuthContext);
 
   const {colors} = useTheme();
 
@@ -77,7 +77,7 @@ export default function OnboardingQuestion({setLoggedIn, navigation}) {
   });
 
   const handleSubmit = () => {
-    login();
+    changeSetupDone();
   };
 
   return (

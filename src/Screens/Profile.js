@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, Pressable, Image} from 'react-native';
+import {View, Text, StyleSheet, Pressable, Image, Platform} from 'react-native';
 import React, {useContext, useState} from 'react';
 import Header from '../Components/Header';
 import {Path, Rect, Svg, Line} from 'react-native-svg';
@@ -192,9 +192,14 @@ const Profile = ({navigation}) => {
       marginBottom: 20,
       fontSize: 18,
     },
-    projetosContainer: {marginTop: 20},
+    projetosContainer: {
+      marginTop: 20,
+      borderTopColor: colors.border,
+      borderTopWidth: 1,
+      paddingTop: 20,
+    },
     screen: {
-      marginVertical: '17%',
+      marginVertical: Platform.OS === 'ios' ? '17%' : 0,
     },
   });
 

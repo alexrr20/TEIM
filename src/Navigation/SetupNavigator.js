@@ -1,7 +1,6 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from '../Screens/Login';
-import ChooseTheme from '../Screens/ChooseTheme';
 import ChangePassword from '../Screens/ChangePassword';
 import OnboardingQuestion from '../Screens/OnboardingQuestion';
 
@@ -14,7 +13,6 @@ const SetupNavigator = ({setLoggedIn}) => {
         headerShown: false,
       }}>
       <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="ChooseTheme" component={ChooseTheme} />
       <Stack.Screen name="ChangePassword" component={ChangePassword} />
       <Stack.Screen
         name="OnboardingQuestion"

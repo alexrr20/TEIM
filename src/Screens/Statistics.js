@@ -1,4 +1,11 @@
-import {View, Text, Pressable, StyleSheet, ScrollView} from 'react-native';
+import {
+  View,
+  Text,
+  Pressable,
+  StyleSheet,
+  ScrollView,
+  Platform,
+} from 'react-native';
 import React, {useState} from 'react';
 import Header from '../Components/Header';
 import {useTheme} from '@react-navigation/native';
@@ -47,7 +54,7 @@ const Statistics = ({navigation}) => {
       borderBottomWidth: 1,
     },
     screen: {
-      marginVertical: '17%',
+      marginVertical: Platform.OS === 'ios' ? '17%' : 0,
     },
   });
 

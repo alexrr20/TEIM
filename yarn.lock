@@ -6220,7 +6220,7 @@ react-native-dynamic-search-bar@^2.0.2:
   resolved "https://registry.npmjs.org/react-native-dynamic-search-bar/-/react-native-dynamic-search-bar-2.0.2.tgz"
   integrity sha512-VOJf43hwfA5TRmYPTmPd5+unosruKXxVL41vP/AaofMrYM90hen0LOgGxUkZquqjg/nQidv/PsQhzOx02orE7w==
 
-react-native-gesture-handler@^2.9.0, react-native-gesture-handler@>=1.10.1:
+react-native-gesture-handler@*, react-native-gesture-handler@^2.9.0, react-native-gesture-handler@>=1.10.1:
   version "2.9.0"
   resolved "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.9.0.tgz"
   integrity sha512-a0BcH3Qb1tgVqUutc6d3VuWQkI1AM3+fJx8dkxzZs9t06qA27QgURYFoklpabuWpsUTzuKRpxleykp25E8m7tg==
@@ -6248,7 +6248,7 @@ react-native-radio-buttons-group@^2.3.0:
   dependencies:
     lodash.isequal "4.5.0"
 
-react-native-reanimated@^2.14.1, react-native-reanimated@>=2.2.0:
+react-native-reanimated@*, react-native-reanimated@^2.14.1, react-native-reanimated@>=2.2.0:
   version "2.14.1"
   resolved "https://registry.npmjs.org/react-native-reanimated/-/react-native-reanimated-2.14.1.tgz"
   integrity sha512-o5fAcfYqgRENguVd1Xxd7PPwBgmqTA9yzrIlUk/I0iHeV+5lRLjYwya+Oz3muefUQoQk9hlVyEvZeEdwClC5AQ==
@@ -6273,6 +6273,13 @@ react-native-screens@^3.18.2, "react-native-screens@>= 3.0.0":
   dependencies:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
+
+react-native-scroll-bottom-sheet@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.npmjs.org/react-native-scroll-bottom-sheet/-/react-native-scroll-bottom-sheet-0.7.0.tgz"
+  integrity sha512-gLgGiB8roynIVcP8tw+Y+iVVCYDDVQW9ug//SX4HhM01Q0nDdRiwVgnCDnMbDQCmAFpwtJEdEs2a+Ys/7L9CIw==
+  dependencies:
+    utility-types "^3.10.0"
 
 "react-native-spinkit@>= 1.5.0":
   version "1.5.1"
@@ -7511,6 +7518,11 @@ util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
+
+utility-types@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.npmjs.org/utility-types/-/utility-types-3.10.0.tgz"
+  integrity sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==
 
 utils-merge@1.0.1:
   version "1.0.1"

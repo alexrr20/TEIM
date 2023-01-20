@@ -2,15 +2,15 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import React, {createContext} from 'react';
 
-export const TaskContext = createContext();
+export const ProjectContext = createContext();
 
-export const TaskProvider = ({children}) => {
+export const ProjectProvider = ({children}) => {
   const getToken = async () => {
     const token = await AsyncStorage.getItem('userToken');
     return token;
   };
 
-  const getTasks = async () => {
+  const getProjects = async () => {
     const token = await getToken();
     const config = {
       headers: {Authorization: `Bearer ${token}`},
@@ -18,10 +18,9 @@ export const TaskProvider = ({children}) => {
     const bodyParameters = {
       key: 'value',
     };
-    console.log(bodyParameters, config);
 
     const req = await axios
-      .get('http://10.0.2.2:3000/tasks/', config, bodyParameters)
+      .get('http://10.0.2.2:3000/projects', config, bodyParameters)
       .then(function (response) {
         try {
           console.log(response.data);
@@ -33,12 +32,13 @@ export const TaskProvider = ({children}) => {
       .catch(function (error) {
         console.log(error);
       });
+
     return req;
   };
 
   return (
-    <TaskContext.Provider value={{getTasks, getToken}}>
+    <ProjectContext.Provider value={{getProjects, getToken}}>
       {children}
-    </TaskContext.Provider>
+    </ProjectContext.Provider>
   );
 };

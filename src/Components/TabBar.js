@@ -11,6 +11,7 @@ import {useTheme} from '@react-navigation/native';
 import {Path, Svg} from 'react-native-svg';
 import {TaskContext} from '../Context/TaskContext';
 import avatar from '../../assets/images/avatar.jpg';
+import Drawer from './Drawer';
 
 export const MyTabBar = ({state, descriptors, navigation}) => {
   const {colors} = useTheme();

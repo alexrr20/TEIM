@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 import React, {
   useCallback,
   useContext,
@@ -13,7 +13,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import {Circle, Path, Rect, Svg, Line} from 'react-native-svg';
 import SearchBar from 'react-native-dynamic-search-bar';
 import Drawer from '../Components/Drawer';
-import axios from 'axios';
+import {TaskContext} from '../Context/TaskContext';
 
 export default function Home({navigation}) {
   const [orderOpen, setorderOpen] = useState(false);
@@ -32,6 +32,18 @@ export default function Home({navigation}) {
     {label: 'Esta Semana', value: 'banana'},
   ]);
 
+  const [tasks, setTasks] = useState([]);
+  const {getTasks} = useContext(TaskContext);
+
+  useEffect(() => {
+    const getTasksEffect = async () => {
+      const result = await getTasks();
+      console.log(result);
+    };
+
+    getTasksEffect();
+  }, []);
+
   const styles = StyleSheet.create({
     dropdownContainer: {
       flexDirection: 'row',
@@ -45,7 +57,7 @@ export default function Home({navigation}) {
       borderColor: '#847EFF',
     },
     screen: {
-      marginVertical: '17%',
+      marginVertical: Platform.OS === 'ios' ? '17%' : 0,
     },
   });
 
@@ -171,7 +183,7 @@ export default function Home({navigation}) {
           placeholderStyle={{fontFamily: 'PPNeueMontreal-Medium'}}
         />
       </View>
-      <TasksList />
+      <TasksList tasks={tasks} />
       <Drawer navigation={navigation} />
     </View>
   );
