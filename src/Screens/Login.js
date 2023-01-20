@@ -65,10 +65,9 @@ function Login({navigation}) {
     },
     loginImage: {
       alignItems: 'center',
-      marginVertical: '45%',
       resizeMode: 'center',
-      height: 250,
-      width: 430,
+      height: '120%',
+      width: '100%',
     },
   });
 
