@@ -131,12 +131,16 @@ const Profile = ({navigation}) => {
 
   const styles = StyleSheet.create({
     adminContainer: {
-      backgroundColor: colors.notification,
+      backgroundColor: '#222148',
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
       paddingHorizontal: 20,
       height: 80,
+      borderBottomColor: '#6B64FF',
+      borderTopColor: '#6B64FF',
+      borderBottomWidth: 1,
+      borderTopWidth: 1,
     },
     leftTopContainer: {
       flexDirection: 'row',
@@ -184,7 +188,14 @@ const Profile = ({navigation}) => {
       color: colors.text,
       fontSize: 32,
     },
-    userHeaderDesc: {fontFamily: 'PPNeueMontreal-Medium'},
+    fontFamily: 'PPNeueMontreal-Bold',
+    userHeaderTag: {
+      marginBottom: 5,
+      marginLeft: 7,
+      color: '#727272',
+      fontFamily: 'PPNeueMontreal-Medium',
+    },
+    userHeaderDesc: {fontFamily: 'PPNeueMontreal-Medium', color: '#faf2ec'},
     projetosHeader: {
       color: colors.text,
       fontFamily: 'PPNeueMontreal-SemiBold',
@@ -228,7 +239,7 @@ const Profile = ({navigation}) => {
           <View style={styles.userInfoContainer}>
             <View style={styles.userHeaderNameTagContainer}>
               <Text style={styles.userHeaderName}>Alexandre</Text>
-              <Text>#141414</Text>
+              <Text style={styles.userHeaderTag}>#141414</Text>
             </View>
             <Text style={styles.userHeaderDesc}>Descrição</Text>
             <Text>Joined Frejen in 2022</Text>
@@ -237,7 +248,7 @@ const Profile = ({navigation}) => {
       </View>
       <View style={styles.projetosContainer}>
         <Text style={styles.projetosHeader}>Projetos</Text>
-        <Projectinfo />
+        <Projectinfo theme={'dark'} />
       </View>
     </View>
   );

@@ -3,7 +3,7 @@ import React from 'react';
 import {Path, Svg} from 'react-native-svg';
 import MembersBadge from './MembersBadge';
 
-const Projectinfo = () => {
+const Projectinfo = ({theme}) => {
   const styles = StyleSheet.create({
     mainContainer: {
       backgroundColor: '#faf2ec',
@@ -12,8 +12,22 @@ const Projectinfo = () => {
       justifyContent: 'space-between',
       marginHorizontal: 18,
     },
+    mainContainerDark: {
+      backgroundColor: '#1A1920',
+      borderRadius: 10,
+      height: 170,
+      justifyContent: 'space-between',
+      marginHorizontal: 18,
+      borderColor: '#242424',
+      borderWidth: 1,
+    },
     projectName: {
       color: '#141414',
+      fontSize: 20,
+      fontFamily: 'PPNeueMontreal-SemiBold',
+    },
+    projectNameDark: {
+      color: '#faf2ec',
       fontSize: 20,
       fontFamily: 'PPNeueMontreal-SemiBold',
     },
@@ -31,6 +45,11 @@ const Projectinfo = () => {
       fontFamily: 'PPNeueMontreal-Medium',
       fontSize: 14,
     },
+    descriptionDark: {
+      color: '#faf2ec',
+      fontFamily: 'PPNeueMontreal-Medium',
+      fontSize: 14,
+    },
     bottomContainer: {
       flexDirection: 'row',
       borderTopColor: '#e2e2e2',
@@ -38,6 +57,15 @@ const Projectinfo = () => {
       alignItems: 'center',
       paddingVertical: 10,
       paddingLeft: 20,
+    },
+    bottomContainerDark: {
+      flexDirection: 'row',
+      borderTopColor: '#242424',
+      borderTopWidth: 1,
+      alignItems: 'center',
+      paddingVertical: 10,
+      paddingLeft: 20,
+      backgroundColor: '#141414',
     },
     infoText: {
       color: '#727272',
@@ -48,6 +76,10 @@ const Projectinfo = () => {
       color: '#141414',
       fontFamily: 'PPNeueMontreal-SemiBold',
     },
+    infoTextNameDark: {
+      color: '#faf2ec',
+      fontFamily: 'PPNeueMontreal-SemiBold',
+    },
     membersBadgeContainer: {
       marginLeft: 20,
       position: 'relative',
@@ -55,10 +87,20 @@ const Projectinfo = () => {
     },
   });
 
+  console.log(theme);
+
   return (
-    <View style={styles.mainContainer}>
+    <View
+      style={
+        theme === 'dark' ? styles.mainContainerDark : styles.mainContainer
+      }>
       <View style={styles.topContainer}>
-        <Text style={styles.projectName}>Project 1</Text>
+        <Text
+          style={
+            theme === 'dark' ? styles.projectNameDark : styles.projectName
+          }>
+          Project 1
+        </Text>
         <Svg
           width="25"
           height="25"
@@ -77,9 +119,17 @@ const Projectinfo = () => {
         <MembersBadge />
       </View>
       <View style={styles.descContainer}>
-        <Text style={styles.description}>Descrição</Text>
+        <Text
+          style={
+            theme === 'dark' ? styles.descriptionDark : styles.description
+          }>
+          Descrição
+        </Text>
       </View>
-      <View style={styles.bottomContainer}>
+      <View
+        style={
+          theme === 'dark' ? styles.bottomContainerDark : styles.bottomContainer
+        }>
         <Svg
           width="15"
           height="15"
@@ -95,7 +145,13 @@ const Projectinfo = () => {
         </Svg>
         <Text style={styles.infoText}>
           Projeto liderado por
-          <Text style={styles.infoTextName}> Alexandre Bessa</Text>
+          <Text
+            style={
+              theme === 'dark' ? styles.infoTextNameDark : styles.infoTextName
+            }>
+            {' '}
+            Alexandre Bessa
+          </Text>
         </Text>
       </View>
     </View>

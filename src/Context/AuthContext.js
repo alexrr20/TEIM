@@ -19,7 +19,8 @@ export const AuthProvider = ({children}) => {
         try {
           console.log(response.data);
           setuserToken(response.data);
-          AsyncStorage.setItem('userToken', response.data);
+          AsyncStorage.setItem('userToken', userToken);
+          console.log(userToken);
         } catch (e) {
           console.log(e);
         } // your catch block

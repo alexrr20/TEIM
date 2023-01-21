@@ -9,29 +9,6 @@ import Task from './Task';
 const TasksList = ({tasks}) => {
   const {colors} = useTheme();
 
-  const [taskItems, setTarefas] = useState([
-    {
-      name: 'Tarefa 1',
-      project: {name: 'Projeto 1 ', color: '#EE293F'},
-      date: ' Ontem',
-    },
-    {
-      name: 'Tarefa 2',
-      project: {name: 'Projeto 2 ', color: '#3765DB'},
-      date: ' Ontem',
-    },
-    {
-      name: 'Tarefa 3',
-      project: {name: 'Projeto 3 ', color: '#FFC145'},
-      date: ' Ontem',
-    },
-    {
-      name: 'Tarefa 4',
-      project: {name: 'Projeto 4 ', color: '#3DFFA2'},
-      date: ' Ontem',
-    },
-  ]);
-
   const styles = StyleSheet.create({
     mainContainer: {
       marginTop: 30,

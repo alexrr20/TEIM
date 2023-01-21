@@ -36,8 +36,33 @@ export const TaskProvider = ({children}) => {
     return req;
   };
 
+  const createTask = async (name, project) => {
+    const token = await getToken();
+    const config = {
+      headers: {Authorization: `Bearer ${token}`},
+    };
+    const bodyParameters = {
+      key: 'value',
+    };
+    console.log(bodyParameters, config);
+
+    const req = await axios
+      .post('http://10.0.2.2:3000/tasks/', {title: name, project_id: project})
+      .then(function (response) {
+        try {
+          return response.data;
+        } catch (e) {
+          console.log(e);
+        } // your catch block
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    return req;
+  };
+
   return (
-    <TaskContext.Provider value={{getTasks, getToken}}>
+    <TaskContext.Provider value={{getTasks, getToken, createTask}}>
       {children}
     </TaskContext.Provider>
   );

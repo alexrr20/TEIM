@@ -9,17 +9,22 @@ import Animated, {
   withSpring,
 } from 'react-native-reanimated';
 import {useTheme} from '@react-navigation/native';
-import {useForm} from 'react-hook-form';
 import TextInput2 from '../Components/TextInput2';
 import DropDownPicker from 'react-native-dropdown-picker';
 import {Svg, Path} from 'react-native-svg';
 import Radio from './Radio';
 import {ProjectContext} from '../Context/ProjectContext';
+import {TaskContext} from '../Context/TaskContext';
+import {useForm} from 'react-hook-form';
 
 const {height: SCREEN_HEIGHT} = Dimensions.get('window');
 
 const Drawer = ({navigation}) => {
   const {colors} = useTheme();
+  const {createTask, getToken} = useContext(TaskContext);
+
+  const [name, setName] = useState([]);
+
   const [projects, setProjects] = useState([]);
 
   const {getProjects} = useContext(ProjectContext);
@@ -130,6 +135,21 @@ const Drawer = ({navigation}) => {
       bottom: 65,
       width: 267,
       left: 130,
+    },
+    submitContainer: {
+      backgroundColor: colors.notification,
+      position: 'relative',
+      bottom: 80,
+      marginHorizontal: 40,
+      borderRadius: 10,
+      height: 60,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    submitText: {
+      color: '#faf2ec',
+      fontFamily: 'PPNeueMontreal-SemiBold',
+      fontSize: 17,
     },
   });
 
@@ -279,10 +299,11 @@ const Drawer = ({navigation}) => {
             </View>
           </View>
           <View style={styles.form1}>
-            <View style={styles.durationContainer}>
-              <Text style={styles.dropDownHeader}>Data</Text>
-              <View style={styles.durationContainer2} />
-            </View>
+            <Pressable
+              style={styles.submitContainer}
+              onPress={createTask(name, value)}>
+              <Text style={styles.submitText}>Concluir</Text>
+            </Pressable>
           </View>
         </View>
       </Animated.ScrollView>
