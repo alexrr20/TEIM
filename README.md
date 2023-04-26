@@ -1,3 +1,5 @@
+<h1>THIS PROJECT IS UNFINISHED. I PLAN ON FINISHING IT WHEN I FINISH MY GRADUATION. IF YOU'RE CURIOUS HOW THE END PRODUCT IS GOING TO LOOK CHECK ITS [BEHANCE PAGE](https://www.behance.net/gallery/161649861/TEIM) (IGNORE THE GIFS 😬) </h1>
+
 <h1 align="center">Welcome to TEIM - (ESMAPP) 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
